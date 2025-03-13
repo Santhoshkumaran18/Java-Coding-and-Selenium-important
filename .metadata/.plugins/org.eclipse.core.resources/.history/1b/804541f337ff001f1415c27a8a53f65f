@@ -1,0 +1,7 @@
+package selenium12March;
+
+public class ReadingPropertiesFile {
+	public static void main(String[] args) {
+		File file=new File(System.getProperty("user.dir") + "\\utilities\\config.properties");
+	}
+}

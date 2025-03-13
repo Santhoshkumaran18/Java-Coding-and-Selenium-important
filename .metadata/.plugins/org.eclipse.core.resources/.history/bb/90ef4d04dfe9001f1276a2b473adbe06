@@ -1,0 +1,15 @@
+package JavaFastRevision;
+import java.util.*;
+
+public class CountTheCharactersUsingArrays {
+	public static void main(String[] args) {
+		String s="Santhosh Kumaran is a good guy in the class Santhosh";
+		String input=s.toLowerCase();
+		String[] words=s.split("\\s+");
+		HashMap<Character,Integer> map=new HashMap<Character,Integer>();
+		
+		for(String word:words) {
+			map.put(words,map.getOrDefault(words,0)+1);
+		}
+	}
+}

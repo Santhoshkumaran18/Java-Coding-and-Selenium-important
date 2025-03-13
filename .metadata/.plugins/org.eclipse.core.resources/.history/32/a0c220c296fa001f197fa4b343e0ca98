@@ -1,0 +1,26 @@
+package SeleniumMarch6Evening;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class KeyboardActions {
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+		Thread.sleep(5000);
+		WebElement slider=driver.findElement(By.xpath("//div[@id='slider-range']"));
+		WebElement sliderrange=driver.findElement(By.xpath("//div[contains(@class,'ui-slider-range')]"));
+		System.out.println(slider.getLocation());
+		System.out.println(sliderrange.getLocation());
+		System.out.println(slider.getSize());
+	}
+}

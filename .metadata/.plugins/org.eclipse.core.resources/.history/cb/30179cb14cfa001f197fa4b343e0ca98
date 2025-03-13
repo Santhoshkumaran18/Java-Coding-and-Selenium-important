@@ -1,0 +1,75 @@
+package SeleniumMarch6;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SeleniumDatePickers {
+	
+	static void Selectmonandyear(WebDriver driver,String ActualMonth, String ActualYear ) {
+		while (true) {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			WebElement datepic = wait.until(
+					ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='ui-datepicker-title']")));
+			String dataandYear = datepic.getText();
+			String[] dateaYear = dataandYear.split(" ");
+			String month = dateaYear[0];
+			System.out.println(month);
+			String year = dateaYear[1];
+			System.out.println(year);
+
+			if ((month.equalsIgnoreCase(ActualMonth) && year.equalsIgnoreCase(ActualYear))) {
+				break;
+			}
+			else {
+				if(Integer.parseInt(ActualYear)<Integer.parseInt(year)) {
+					driver.findElement(By.xpath("//span[text()='Prev']")).click();
+				}else {
+					driver.findElement(By.xpath("//span[text()='Next']")).click();
+				}
+				
+			}
+				
+
+		}
+	}
+	
+	static void selectData(WebDriver driver,String ActualDate) {
+		List<WebElement> calender1 = driver
+				.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td"));
+		for (WebElement c : calender1) {
+			if (c.getText().equals(ActualDate)) {
+				c.click();
+				break;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+
+		driver.navigate().refresh();
+
+		driver.findElement(By.xpath("//input[@id='datepicker']")).click();
+		
+
+		String ActualDate = "20";
+		String ActualMonth = "December";
+		String ActualYear = "2020";
+
+		
+		
+
+	}
+}

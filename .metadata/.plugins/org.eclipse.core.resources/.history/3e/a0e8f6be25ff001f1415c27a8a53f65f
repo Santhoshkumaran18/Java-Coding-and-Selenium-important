@@ -1,0 +1,41 @@
+package selenium12March;
+
+import java.io.File;
+import java.io.IOException;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DataDrivenTesting {
+	public static void main(String[] args) throws IOException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.moneycontrol.com/fixed-income/calculator/state-bank-of-india-sbi/fixed-deposit-calculator-SBI-BSB001.html?classic=true");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+		
+		WebElement principal=driver.findElement(By.xpath("//input[@name='principal']"));
+		WebElement roi=driver.findElement(By.xpath("//input[@name='interest']"));
+		WebElement period=driver.findElement(By.xpath("//input[@name='tenure']"));
+		WebElement periodDays=driver.findElement(By.xpath("//select[@name='tenurePeriod']"));
+		WebElement periodfrequency=driver.findElement(By.xpath("//select[@name='frequency']"));
+		Select day=new Select(periodDays);
+		Select frequency=new Select(periodfrequency);
+		
+		WebElement calculate=driver.findElement(By.xpath("//img[@src='https://images.moneycontrol.com/images/mf_revamp/btn_calcutate.gif']"));
+		WebElement clear=driver.findElement(By.xpath("//img[@class='PL5']"));
+		String file="C:/Users/S Santhosh Kumaran/caldata.xlsx";
+		int rows=ExcelUtils.getRowCount(file, "sheet1");
+		System.out.println(rows);
+		int columns=ExcelUtils.getcellCount(file,"sheet1",2);
+		System.out.println(columns);
+		
+	}
+}

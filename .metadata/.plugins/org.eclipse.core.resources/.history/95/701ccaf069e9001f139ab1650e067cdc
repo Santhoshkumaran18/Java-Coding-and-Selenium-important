@@ -1,0 +1,13 @@
+package JavaProgramRevision;
+
+public class CountTheCharactersUsingHashMap {
+	public static void main(String[] args) {
+		String s="Delloite Interview Questions";
+		String input=s.toLowerCase();
+		for(char c:input.toCharArray()) {
+			if((c>='a' && c<='z')) {
+				
+			}
+		}
+	}
+}

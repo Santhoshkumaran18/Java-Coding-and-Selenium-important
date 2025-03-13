@@ -1,0 +1,7 @@
+package selenium12March;
+
+public class ApachePOIExamples {
+	public static void main(String[] args) {
+		File file=new File(System.getProperty("user.dir")+ "/utilities/TestData.xlsx");
+	}
+}

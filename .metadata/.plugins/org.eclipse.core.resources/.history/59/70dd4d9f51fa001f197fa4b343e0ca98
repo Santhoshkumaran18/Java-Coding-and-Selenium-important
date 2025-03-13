@@ -1,0 +1,69 @@
+package SeleniumMarch6;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Datepickerseleniututorialspoint {
+	public static void main(String[] args) throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.tutorialspoint.com/selenium/practice/date-picker.php");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+
+		driver.findElement(By.xpath("//input[@id='datetimepicker1']")).click();
+
+		String ActualDate = "21";
+		String ActualMonth = "March";
+		String ActualYear = "2021";
+		
+		WebElement month=driver.findElement(By.xpath("(//select[@class='flatpickr-monthDropdown-months'])[1]"));
+		Select mon=new Select(month);
+		List<WebElement> months=mon.getOptions();
+		for(WebElement li:months) {
+			if(li.getText().equalsIgnoreCase(ActualMonth)) {
+				li.click();
+				break;
+			}
+		}
+		
+		
+		while(true) {
+			WebElement year=driver.findElement(By.xpath("(//input[@type='number'])[1]"));
+			System.out.println(year.getAttribute("value"));
+			String currentyear=year.getAttribute("value");
+			if(currentyear.equals(ActualYear)) {
+				break;
+			}else {
+				if(Integer.parseInt(currentyear)>Integer.parseInt(ActualYear)) {
+					WebElement arrowup=driver.findElement(By.xpath("(//span[@class='arrowDown'])[1]"));
+					arrowup.click();
+				}
+				else {
+					WebElement arrowdown=driver.findElement(By.xpath("(//span[@class='arrowUp'])[1]"));
+					arrowdown.click();
+
+				}
+				
+			}
+		}
+		
+		List<WebElement> dates=driver.findElements(By.xpath("(//div[@class='dayContainer'])[1]/span[contains(@aria-label,'March')]"));
+		for(WebElement li:dates) {
+			if(li.getText().equals(ActualDate)) {
+				li.click();
+				break;
+			}
+		}
+		
+		
+	}
+}

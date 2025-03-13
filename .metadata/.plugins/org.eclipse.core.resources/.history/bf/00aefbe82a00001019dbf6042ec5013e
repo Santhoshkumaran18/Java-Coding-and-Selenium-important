@@ -1,0 +1,18 @@
+package Java13MarchRevision;
+
+import java.util.HashMap;
+
+public class CountOfCharacterAndword {
+	public static void main(String[] args) {
+		String s="Automation of java is my favourite part";
+		HashMap<String,Integer> map=new HashMap<String,Integer>();
+		String input=s.toLowerCase();
+		String[] words=input.split(" ");
+		for(String w:words) {
+			map.put(w, map.getOrDefault(w,0)+1);
+		}
+		for(Map.Entry<String,Integer> entry:map.entrySet()) {
+			System.out.println(entry.getKey() + entry.getValue());
+		}
+	}
+}

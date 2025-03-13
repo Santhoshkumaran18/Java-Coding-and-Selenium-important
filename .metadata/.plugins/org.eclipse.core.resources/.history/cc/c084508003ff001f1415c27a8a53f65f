@@ -1,0 +1,7 @@
+package selenium12March;
+
+public class ApachePOIWritingtheDatainExcelFile {
+	public static void main(String[] args) {
+		
+	}
+}

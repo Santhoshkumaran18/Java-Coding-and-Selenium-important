@@ -1,0 +1,10 @@
+package JavaSwiggyRevision;
+
+public class CountOfEachLetters {
+	public static void main(String[] args) {
+		String s="Santhosh Kumaran is part of the project";
+		String input=s.toLowerCase();
+		
+		
+	}
+}

@@ -1,0 +1,9 @@
+package Java13MarchRevision;
+
+public class SortingAlgorithm {
+	public static void main(String[] args) {
+		int[] arr= {1,2,3,4,5,7,-10,11-12,-22};
+		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
+	}
+}

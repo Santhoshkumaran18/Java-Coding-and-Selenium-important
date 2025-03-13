@@ -1,0 +1,45 @@
+package SeleniumMarch6Evening;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Switchtabs {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://demo.nopcommerce.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+		
+		WebElement registerlink=driver.findElement(By.xpath("//a[text()='Log in']"));
+		Actions a=new Actions(driver);
+		a.keyDown(Keys.CONTROL).click(registerlink).build().perform();
+		String parentwindow=driver.getWindowHandle();
+		Set<String> windows=driver.getWindowHandles();
+		List<String> list=new ArrayList<String>(windows);
+		System.out.println(list.size());
+		String secondwindow=list.get(list.size()-1);
+		driver.switchTo().window(secondwindow);
+		System.out.println(driver.getTitle());
+		for(String w:windows) {
+			if(!w.equals(parentwindow)) {
+				driver.switchTo().window(w);
+				System.out.println(driver.getTitle());
+				break;
+			}
+		}
+		driver.switchTo().window(parentwindow);
+		System.out.println(driver.getTitle() + ":" + driver.getCurrentUrl());
+	}
+}

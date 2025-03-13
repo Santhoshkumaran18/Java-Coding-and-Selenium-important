@@ -1,0 +1,10 @@
+package JavaOOPSConcepts;
+
+public class Parent{
+	
+}
+public class DowncastingExample {
+	public static void main(String[] args) {
+		
+	}
+}

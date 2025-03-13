@@ -1,0 +1,26 @@
+package Java13MarchRevision;
+
+import java.util.Arrays;
+
+public class StringAnagram {
+	public static void main(String[] args) {
+		if(StringAnagram("silent","Listen")) {
+			System.out.println("It is an anagram word");
+		}else {
+			System.out.println("It is not an anagaram word");
+		}
+	}
+	
+	public static boolean StringAnagram(String str1,String str2) {
+		str1=str1.replaceAll("\\s", "");
+		str2=str2.replaceAll("\\s", "");
+		
+		char[] c1=str1.toCharArray();
+		char[] c2=str2.toCharArray();
+		
+		Arrays.sort(c1);
+		Arrays.sort(c2);
+		
+		return Arrays.equals(c1, c2);
+	}
+}

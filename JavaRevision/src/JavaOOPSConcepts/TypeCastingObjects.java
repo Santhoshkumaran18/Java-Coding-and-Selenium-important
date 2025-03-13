@@ -1,0 +1,44 @@
+package JavaOOPSConcepts;
+
+import java.util.Arrays;
+
+import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
+
+class Parent{
+	String name="John";
+	void m1() {
+		System.out.println("This is m1 from the parent parent class");
+	}
+}
+
+class Child extends Parent{
+	int id=20;
+	void m2() {
+		System.out.println("This is m2 from the child class");
+	}
+}
+public class TypeCastingObjects {
+	public static void main(String[] args) {
+		/*
+		 * Child c=new Child(); System.out.println(c.id); c.m1(); c.m2();
+		 */
+		
+		Parent p=new Child();
+		System.out.println(p.name);
+		p.m1();
+		
+		/*
+		 * Parent pa=new Parent(); Child c=(Child)pa;
+		 * 
+		 * System.out.println(c.id);
+		 */
+		
+		Object[] ba= {1,'A',"Santhosh"};
+		System.out.println(Arrays.toString(ba));
+		
+		
+		
+		
+	}
+	
+}

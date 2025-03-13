@@ -1,0 +1,22 @@
+package JavaImportantRevision;
+
+import java.util.Scanner;
+
+public class Factorial {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the number to check for the factorial");
+		int num=s.nextInt();
+		
+		if(num<0) {
+			System.out.println("Factorial of a number cannot be negative");
+		}else {
+			long factorial=1;
+			for(int i=1;i<=num;i++) {
+				factorial*=i;
+			}
+			System.out.println("Factorial of a number is : "+ factorial);
+		}
+		
+	}
+}

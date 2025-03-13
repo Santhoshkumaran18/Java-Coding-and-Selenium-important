@@ -1,0 +1,36 @@
+package selenium12March;
+
+import java.io.IOException;
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class DataDrivenTestingExercise {
+	public static void main(String[] args) throws IOException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.moneycontrol.com/fixed-income/calculator/state-bank-of-india-sbi/fixed-deposit-calculator-SBI-BSB001.html?classic=true");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+		String file="C:\\Users\\S Santhosh Kumaran\\ExerciseFile.xlsx";
+		String sheetname="sheet1";
+		WebElement initialDeposit=driver.findElement(By.xpath("//input[@id='mat-input-0']"));
+		WebElement lengthofcd=driver.findElement(By.xpath("//input[@id='mat-input-1']"));
+		WebElement interesetRate=driver.findElement(By.xpath("//input[@id='mat-input-1']"));
+		WebElement dropdownselect=driver.findElement(By.xpath("//div[@id='mat-select-value-1']"));
+		
+		List<WebElement> dropdownvalues=driver.findElements(By.xpath("//div[@role='listbox']/mat-option"));
+		WebElement submitbutton=driver.findElement(By.xpath("//button[@type='submit']"));
+		WebElement expectedvalue=driver.findElement(By.xpath("(//span[@class='CIT-calc-result--item CIT-typography--bold'])[4]"));
+		
+		int rows=ExcelUtils.getRowCount(file,sheetname);
+		System.out.println("Total number of rows in the excel is: " + rows);
+		int columns=ExcelUtils.getcellCount(file, "sheet1", rows)
+	}
+}

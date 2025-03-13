@@ -1,0 +1,14 @@
+package JavaSwiggyRevision;
+
+public class MoveEvenAndOddtoOneSdie {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void oddEven(int arr[]) {
+		int lo=0,hi=arr.length-1;
+		while(lo<hi) {
+			
+		}
+	}
+}

@@ -1,0 +1,11 @@
+package selenium12March;
+
+import java.io.File;
+import java.io.FileInputStream;
+
+public class ApachePOIExamples {
+	public static void main(String[] args) {
+		File file=new File(System.getProperty("user.dir")+ "/utilities/TestData.xlsx");
+		FileInputStream fis=new FileInputStream(file);
+	}
+}

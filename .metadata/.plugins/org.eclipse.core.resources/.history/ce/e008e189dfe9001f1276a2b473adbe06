@@ -1,0 +1,10 @@
+package JavaFastRevision;
+import java.util.*;
+
+public class CountTheCharactersUsingArrays {
+	public static void main(String[] args) {
+		String s="Automation Testing";
+		String input=s.toLowerCase();
+		
+	}
+}

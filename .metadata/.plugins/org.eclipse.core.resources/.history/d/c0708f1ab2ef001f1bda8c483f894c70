@@ -1,0 +1,28 @@
+package SeleniumRevision;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LocatorsStrategy {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.google.com/");
+		driver.get("https://demo.opencart.com/");
+		
+		WebElement searchBox=driver.findElement(By.id("logo"));
+		System.out.println(searchBox.isDisplayed());
+		driver.findElement(By.name("search")).sendKeys("Santhosh");
+		
+		System.out.println(driver.findElement(By.className("img-fluid")).isDisplayed());
+		
+		driver.findElement(By.linkText("Tablets")).click();
+		driver.findElement(By.className("nav-link")).click();
+		
+		
+	}
+}

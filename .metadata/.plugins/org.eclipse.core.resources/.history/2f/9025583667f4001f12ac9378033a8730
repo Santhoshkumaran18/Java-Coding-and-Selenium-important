@@ -1,0 +1,19 @@
+package JavaOOPSConcepts;
+
+
+class Parent{
+	String name="John";
+	void m1() {
+		System.out.println("This is m1 from the parent parent class");
+	}
+}
+
+class Child{
+	int id=20;
+	void m2() {
+		System.out.println("This is m2 from the child class");
+	}
+}
+public class TypeCastingObjects {
+	
+}

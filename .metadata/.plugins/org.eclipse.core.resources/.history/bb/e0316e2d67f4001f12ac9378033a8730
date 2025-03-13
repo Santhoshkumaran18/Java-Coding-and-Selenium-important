@@ -1,0 +1,9 @@
+package JavaOOPSConcepts;
+
+
+class Parent{
+	String name="John";
+}
+public class TypeCastingObjects {
+	
+}

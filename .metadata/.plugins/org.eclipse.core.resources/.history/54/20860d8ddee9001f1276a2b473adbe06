@@ -1,0 +1,10 @@
+package JavaFastRevision;
+
+public class CountTheCharactersUsingHashMap {
+	public static void main(String[] args) {
+		String s="Delloite";
+		String input=s.toLowerCase();
+		HashMap<Character,Integer> map=new HashMap<Character,Integer>();
+		
+	}
+}

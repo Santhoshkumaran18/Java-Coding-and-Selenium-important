@@ -1,0 +1,9 @@
+package JavaFastRevision;
+
+public class CountTheCharactersUsingArrays {
+	public static void main(String[] args) {
+		String s="Santhosh Kumaran is a good guy in the class Santhosh";
+		String input=s.toLowerCase();
+		
+	}
+}

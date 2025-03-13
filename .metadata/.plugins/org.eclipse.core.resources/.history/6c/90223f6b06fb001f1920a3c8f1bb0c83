@@ -1,0 +1,16 @@
+package JavaSwiggyRevision;
+
+public class Stringreversedpreserving {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void stringpreserve(String str) {
+		int start=0, end=str.length()-1;
+		char[] Str=str.toCharArray();
+		
+		while(start<end) {
+			
+		}
+	}
+}

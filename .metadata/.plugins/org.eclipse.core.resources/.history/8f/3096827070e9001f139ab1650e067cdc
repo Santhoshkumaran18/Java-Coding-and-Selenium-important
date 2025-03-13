@@ -1,0 +1,29 @@
+package JavaProgramRevision;
+
+import java.util.Scanner;
+
+public class PrimeNumberFrom1toN {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the you want to print the prime numbers");
+		int num=s.nextInt();
+		
+		for(int i=2;i<=50;i++) {
+			if(isPrime(num)) {
+				System.out.println(i + " ");
+			}
+		}
+	}
+	
+	public static boolean isPrime(int n) {
+		if(n<2) {
+			return false;
+		}
+		for(int i=2;i<=n;i++) {
+			if(n%i==0) {
+				return false;
+			}
+		}
+		return true;
+	}
+}	

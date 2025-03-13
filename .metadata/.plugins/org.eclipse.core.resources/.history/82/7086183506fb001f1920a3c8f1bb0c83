@@ -1,0 +1,11 @@
+package JavaSwiggyRevision;
+
+public class Stringreversedpreserving {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void stringpreserve(String str) {
+		
+	}
+}

@@ -1,0 +1,13 @@
+package selenium12March;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelUtils {
+	public static FileInputStream fis;
+	public static FileOutputStream fos;
+	public static XSSFWorkbook workbook;
+	
+}

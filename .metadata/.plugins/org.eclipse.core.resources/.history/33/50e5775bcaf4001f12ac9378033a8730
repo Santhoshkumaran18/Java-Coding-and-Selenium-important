@@ -1,0 +1,12 @@
+package JavaOOPSConcepts;
+
+public class Parent{
+	void m1() {
+		System.out.println("It is part o m1 method");
+	}
+}
+public class DowncastingExample {
+	public static void main(String[] args) {
+		
+	}
+}

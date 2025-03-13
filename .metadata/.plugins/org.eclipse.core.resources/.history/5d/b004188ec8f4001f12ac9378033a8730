@@ -1,0 +1,18 @@
+package JavaOOPSConcepts;
+
+public class TypeCastingObjects4 {
+	public static void main(String[] args) {
+		//A a=c D
+		//Rule 1--> C and d must have the relationship between them
+		//Rule 2--> Assignment of the variable should be valida either c or 
+		//Rule 3--> D should have the relation between them
+		Object o=new String("Welcome");
+		StringBuffer s=(StringBuffer)o;
+		
+		Object ob=new String("Welcome");
+		String sb=(String) ob;
+		System.out.println(sb);
+
+		
+	}
+}

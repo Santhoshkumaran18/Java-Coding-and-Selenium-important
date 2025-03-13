@@ -1,0 +1,19 @@
+package JavaOOPSConcepts;
+
+public class ExceptionWithoutCatchBlokc {
+		public static void main(String[] args) {
+			String s=null;
+			try {
+				System.out.println(s.length());
+			}
+			catch(Exception e) {
+				System.out.println(e.getMessage());
+				System.out.println("Exception handled");
+			}
+			finally {
+				System.out.println("It is part of finally block");
+			}
+			
+			
+		}
+}

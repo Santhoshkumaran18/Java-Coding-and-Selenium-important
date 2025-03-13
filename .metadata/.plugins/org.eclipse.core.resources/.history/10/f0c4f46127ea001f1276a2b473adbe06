@@ -1,0 +1,18 @@
+package JavaFastRevision;
+import java.util.*;
+
+public class DuplicateElements {
+	public static void main(String[] args) {
+		int[] a= {1,2,2,3,3,3,4,4,5,5,6,6,6,9};
+		LinkedHashSet<Integer> duplicates=new LinkedHashSet<Integer>();
+		LinkedHashSet<Integer> Non_Duplicates=new LinkedHashSet<Integer>();
+		
+		for(int b:a) {
+			
+				Non_Duplicates.add(b);
+			}
+		
+		System.out.println(duplicates);
+		System.out.println(Non_Duplicates);
+	}
+}

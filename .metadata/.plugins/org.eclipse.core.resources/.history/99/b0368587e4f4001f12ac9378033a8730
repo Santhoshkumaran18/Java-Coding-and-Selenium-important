@@ -1,0 +1,20 @@
+package JavaOOPSConcepts;
+
+public class ExceptionsDemo {
+	public static void main(String[] args) {
+		try {
+			int x=10/0;
+			int z[]=new int[5];
+			int[] z= {1,2,3,4,5,6};
+			System.out.println(x);
+			System.out.println();
+		}
+		catch(ArithmeticException e) {
+			System.out.println("Arithmetic excpetion");
+		}
+		catch (Exception e) {
+			System.out.println("Division of a number cannot be zero");
+		}
+		
+	}
+}

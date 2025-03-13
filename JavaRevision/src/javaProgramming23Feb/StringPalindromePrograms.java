@@ -1,0 +1,18 @@
+package javaProgramming23Feb;
+
+public class StringPalindromePrograms {
+	public static void main(String[] args) {
+		if(CheckPalindrome("mamd")) {
+			System.out.println("It is a palindrome word");
+		}else {
+			System.out.println("It is not a palindrome word");
+		}
+	}
+	
+	public static boolean CheckPalindrome(String str) {
+		String cleanedStr=str.replaceAll("[^a-zA-Z0-9]","").toLowerCase();
+		String reversedStr=new StringBuilder(cleanedStr).reverse().toString();
+		
+		return cleanedStr.equals(reversedStr);
+	}
+}

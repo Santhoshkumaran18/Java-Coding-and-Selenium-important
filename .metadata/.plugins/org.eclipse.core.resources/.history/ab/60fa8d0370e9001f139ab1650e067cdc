@@ -1,0 +1,13 @@
+package JavaProgramRevision;
+
+public class PrimeNumberFrom1toN {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static boolean isPrime(int n) {
+		if(n<0) {
+			
+		}
+	}
+}	

@@ -1,0 +1,11 @@
+package JavaSwiggyRevision;
+
+public class StringReversed {
+	public static void main(String[] args) {
+		String s="Santhosh Kumaran s";
+		String input=s.toLowerCase();
+		for(int i=s.length()-1;i>=0;i--) {
+			
+		}
+	}
+}

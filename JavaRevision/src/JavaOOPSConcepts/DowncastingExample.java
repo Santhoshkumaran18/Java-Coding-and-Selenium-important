@@ -1,0 +1,25 @@
+package JavaOOPSConcepts;
+
+class Parenting{
+	void m1() {
+		System.out.println("It is part o m1 method");
+	}
+}
+
+ class childing extends Parenting{
+	void display() {
+		System.out.println("It is part of child class");
+	}
+}
+public class DowncastingExample {
+	public static void main(String[] args) {
+		Parenting p=new childing();
+		childing c=(childing)p;
+		c.m1();
+		c.display();
+		
+		p.m1();
+		System.out.println(p.hashCode());
+		System.out.println(c.hashCode());
+	}
+}

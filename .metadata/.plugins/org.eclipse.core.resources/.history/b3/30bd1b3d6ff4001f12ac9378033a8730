@@ -1,0 +1,13 @@
+package JavaOOPSConcepts;
+
+class Animal{};
+
+class dog extends Animal{};
+class cat extends Animal{};
+
+
+public class TypeCastingObjectsTerminology {
+	public static void main(String[] args) {
+		
+	}
+}

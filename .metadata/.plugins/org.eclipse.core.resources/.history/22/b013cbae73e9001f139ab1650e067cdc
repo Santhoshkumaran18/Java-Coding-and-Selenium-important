@@ -1,0 +1,16 @@
+package JavaProgramRevision;
+
+public class PrimeNumberRevision {
+	public static void main(String[] args) {
+		
+	}
+	
+	public static boolean isPrime(int num) {
+		if(num<2) {
+			return false;
+		}
+		for(int i=2;i<=num;i++) {
+			
+		}
+	}
+}

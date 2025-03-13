@@ -1,0 +1,43 @@
+package selenium12March;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelUtils {
+	public static FileInputStream fis;
+	public static FileOutputStream fos;
+	public static XSSFWorkbook workbook;
+	public static XSSFSheet sheet;
+	public static XSSFRow row;
+	public static XSSFCell cell;
+	public static XSSFCellStyle style;
+	
+	public static int getRowCount(String file,String sheetname) throws IOException {
+		fis=new FileInputStream(file);
+		workbook=new XSSFWorkbook(fis);
+		sheet=workbook.getSheet(sheetname);
+		int rows=sheet.getPhysicalNumberOfRows();
+		workbook.close();
+		fis.close();
+		return rows;
+	}
+	
+	public static int getColumnsCount(String file,String sheetname,int rownum) throws IOException {
+		fis=new FileInputStream(file);
+		workbook=new XSSFWorkbook(fis);
+		sheet=workbook.getSheet(sheetname);
+		int rows=sheet.getPhysicalNumberOfRows();
+		cell=sheet.getRow(r).getPhysicalNumberOfCells();
+		int columns=rows.get
+		workbook.close();
+		fis.close();
+		return rows;
+	}
+}

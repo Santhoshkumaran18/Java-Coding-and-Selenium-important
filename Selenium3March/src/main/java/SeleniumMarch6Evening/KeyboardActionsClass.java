@@ -1,0 +1,36 @@
+package SeleniumMarch6Evening;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class KeyboardActionsClass {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://text-compare.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+		
+		WebElement text1=driver.findElement(By.xpath("//textarea[@name='text1']"));
+		text1.sendKeys("Santhosh is part of the project");
+		Actions a=new Actions(driver);
+		//Ctrl + A select all the text in the box
+		a.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).build().perform();
+		//CTRL +C
+		a.keyDown(Keys.CONTROL).sendKeys("C").keyUp(Keys.CONTROL).build().perform();
+		
+		//Tabl
+		a.keyDown(Keys.TAB).keyUp(Keys.TAB).build().perform();
+		
+		//ctrl+v
+		a.keyDown(Keys.CONTROL).sendKeys("V").keyUp(Keys.CONTROL).build().perform();
+	}
+}

@@ -1,0 +1,25 @@
+package SeleniumMarch6;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Datepickerseleniututorialspoint {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.tutorialspoint.com/selenium/practice/date-picker.php");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+
+		driver.findElement(By.xpath("//input[@id='datepicker']")).click();
+
+		String ActualDate = "21";
+		String ActualMonth = "December";
+		String ActualYear = "2023";
+	}
+}

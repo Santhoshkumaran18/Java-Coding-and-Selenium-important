@@ -1,0 +1,23 @@
+package javaProgramming23Feb;
+
+import java.util.HashMap;
+
+public class TwoSumProgram {
+	public static void main(String[] args) {
+		int[] nums= {2,0,9,11,22,45,38};
+	}
+
+	public static int[] twoSum(int[] nums, int target) {
+		HashMap<Integer, Integer> map = new HashMap<>();
+		
+		for(int i=0;i<nums.length;i++) {
+			int complement=target-nums[i];
+			
+			if(map.containsKey(complement)) {
+				return new int[] {map.get(complement),i};
+			}
+			map.put(nums[i],0);
+		}
+		return null;
+	}
+}

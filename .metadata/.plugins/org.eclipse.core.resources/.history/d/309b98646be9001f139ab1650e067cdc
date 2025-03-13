@@ -1,0 +1,12 @@
+package JavaProgramRevision;
+
+public class CountTheCharactersUsingArrayMethod {
+	public static void main(String[] args) {
+		String s="Santhosh Kumaran S";
+		String input=s.toLowerCase();
+		int[] lettersCount=new int[26];
+		for(char c:input.toCharArray()) {
+			
+		}
+	}
+}

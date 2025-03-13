@@ -1,0 +1,36 @@
+package Java13MarchRevision;
+
+import java.util.Arrays;
+
+public class BinarySearchComparision {
+	public static void main(String[] args) {
+		int arr[]= {13,4,6,7,8,0,10,11};
+		System.out.println(Arrays.toString(arr));
+		int target=11;
+		int result=binarySearch(arr, target);
+		if(result!=-1) {
+			System.out.println("Element is present in the index of: " + result);
+		}else {
+			System.out.println("Element is not present in the array");
+		}
+		
+		
+	}
+	
+	public static int binarySearch(int arr[],int target) {
+		Arrays.sort(arr);
+		int low=0,high=arr.length-1;
+		while(low<=high) {
+			int mid=low + (high-low)/2;
+			if(arr[mid]==target) {
+				return mid;
+			}
+			if(arr[mid]<target) {
+				low=mid+1;
+			}else {
+				high=mid-1;
+			}
+		}
+		return -1;
+	}
+}

@@ -1,0 +1,30 @@
+package SeleniumMarch6Evening;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ActionsClassExample {
+	public static void main(String[] args) {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://demo.nopcommerce.com/");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().window().maximize();
+		
+		Actions a=new Actions(driver);
+		WebElement computer=driver.findElement(By.xpath("(//a[text()='Computers '])[1]"));
+		WebElement desktop=driver.findElement(By.xpath("(//a[contains(text(),'Notebooks')])[1]"));		
+		a.moveToElement(computer).moveToElement(desktop).click().build().perform();
+		
+		driver.navigate().to("https://swisnl.github.io/jQuery-contextMenu/demo.html");
+		
+		
+	}
+}

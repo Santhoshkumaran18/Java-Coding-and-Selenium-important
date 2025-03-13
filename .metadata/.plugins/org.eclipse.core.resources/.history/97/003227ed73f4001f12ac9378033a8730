@@ -1,0 +1,19 @@
+package JavaOOPSConcepts;
+
+class Animal1{};
+
+class dog1 extends Animal1{};
+class cat1 extends Animal1{};
+
+
+public class TypeCastingObjectsTerminology {
+	public static void main(String[] args) {
+		Animal1 an=new dog1();
+		Animal1 an1=new cat1();
+		
+		cat1 ct=(cat1)an;
+		cat1 ct2=(cat1)an1;
+		
+		
+	}
+}

@@ -1,0 +1,16 @@
+package JavaFastRevision;
+import java.util.*;
+
+public class CountTheCharactersUsingArrays {
+	public static void main(String[] args) {
+		String s="Automation Testing";
+		String input=s.toLowerCase();
+		
+		int[] lettersCount=new int[26];
+		for(char c:input.toCharArray()) {
+			if((c>='a' && c<='z')) {
+				
+			}
+		}
+	}
+}

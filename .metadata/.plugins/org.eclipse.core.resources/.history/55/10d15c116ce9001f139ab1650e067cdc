@@ -1,0 +1,12 @@
+package JavaProgramRevision;
+
+import java.util.Scanner;
+
+public class Factorial {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the number to check for the factorial");
+		int num=s.nextInt();
+		
+	}
+}

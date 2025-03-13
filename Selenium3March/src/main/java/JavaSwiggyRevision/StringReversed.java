@@ -1,0 +1,13 @@
+package JavaSwiggyRevision;
+
+public class StringReversed {
+	public static void main(String[] args) {
+		String s="Santhosh Kumaran s";
+		String input=s.toLowerCase();
+		String reversed="";
+		for(int i=s.length()-1;i>=0;i--) {
+			reversed+=s.charAt(i);
+		}
+		System.out.println("Reversed word:" + reversed);
+	}
+}

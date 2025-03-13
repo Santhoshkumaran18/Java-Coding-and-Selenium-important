@@ -1,0 +1,33 @@
+package JavaSwiggyRevision;
+
+public class Stringreversedpreserving {
+	public static void main(String[] args) {
+		String s="Santhosh is part of the project";
+		System.out.println(s);
+		stringpreserve(s);
+	}
+	
+	public static void stringpreserve(String str) {
+		int start=0, end=str.length()-1;
+		char[] Str=str.toCharArray();
+		
+		while(start<end) {
+			if(Str[start]==' ') {
+				start++;
+				continue;
+			}
+			else if(Str[end]==' ') {
+				end--;
+				continue;
+			}
+			else {
+				char temp=Str[start];
+				Str[start]=Str[end];
+				Str[end]=temp;
+				start++;
+				end--;
+			}
+		}
+		System.out.println(String.valueOf(Str));
+	}
+}

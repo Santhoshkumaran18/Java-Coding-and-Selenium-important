@@ -1,0 +1,12 @@
+package JavaFastRevision;
+import java.util.*;
+
+public class CountTheWordsinString {
+	public static void main(String[] args) {
+		String s="Santhosh Kumaran is Santhosh Kumaran";
+		String input=s.toLowerCase();
+		String[] words=input.split(" ");
+		HashMap<Character,Integer> map=new HashMap<>();
+		
+	}
+}

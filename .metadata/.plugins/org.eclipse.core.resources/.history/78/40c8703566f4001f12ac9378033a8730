@@ -1,0 +1,24 @@
+package JavaOOPSConcepts;
+
+public class TypeCastingConcepts {
+	public static void main(String[] args) {
+		int a=10;
+		//Upcasting-> converting the smaller datatype to the larger datatype
+		//Downcasting-> converting the larger datatype to smaller datatype
+		
+		long b=a;
+		//if we want to convert larger to smaller datatype we should cast to the respective value
+		double c=b;
+		float d=b;
+		
+		//upcasting happens automatically in java 
+		//byte->short
+		//Downcasting--> Manually convert the larger datatype to the smaller datatype
+		 //byte-short-int-long-float-double-char- boolean
+		//it may cause data loss 
+		//Downcasting--> converting the larger datatype to smaller datatype
+		//it may cause data loss
+		
+		
+	}
+}

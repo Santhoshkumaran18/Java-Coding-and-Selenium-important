@@ -1,0 +1,7 @@
+package javaProgramming23Feb;
+
+public class MoveZerosToFront {
+	public static void main(String[] args) {
+		
+	}
+}

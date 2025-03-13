@@ -1,0 +1,7 @@
+package JavaOOPSConcepts;
+
+public class DowncastingExample {
+	public static void main(String[] args) {
+		
+	}
+}
