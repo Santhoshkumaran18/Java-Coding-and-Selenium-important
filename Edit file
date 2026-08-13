@@ -1,0 +1,415 @@
+Initial KT Notes – ACG Digital Channels, Personas & Insurance Flow
+
+1. Overview
+
+ACG – Auto Club Group
+
+- ACG refers to Auto Club Group.
+- AAA membership is associated with the Auto Club Group (ACG).
+- ACG operates across multiple states.
+- The applicable state/business flow is determined based on the customer's ZIP code.
+- The user is navigated to the appropriate state-specific experience based on the ZIP code.
+
+Example:
+
+- ZIP Code: 38326
+- State: Tennessee (TN)
+
+---
+
+2. Digital Channels
+
+The primary digital channel is AAA.com, which supports different end-user experiences.
+
+AAA.com – Supported Channels
+
+- Web Browser
+- Mobile Browser
+- Mobile Application
+
+Main Digital Insurance Portal
+
+The insurance experience provides self-service capabilities for customers.
+
+Key capabilities include:
+
+- Quote
+- Bind
+- Manage existing policies
+- Add-ons / additional products
+- Policy-related self-service activities
+
+---
+
+3. User Personas
+
+The digital insurance experience mainly supports the following user personas:
+
+3.1 Guest User
+
+A new/unregistered user entering the digital experience.
+
+Typical activities:
+
+- Obtain a quote
+- Bind a policy
+- Retrieve a quote
+- Save and return later
+- Create an online account
+- Eventually sign in and continue the process
+
+3.2 Signed-In User
+
+An existing customer/user who already has an online account.
+
+Typical activities:
+
+- Access existing policies
+- Manage policies
+- Perform self-service activities
+- Add additional products/add-ons
+- Continue an existing quote or transaction
+
+Persona Summary
+
+Persona| Description
+Guest User| New user entering the digital experience
+Signed-In User| Existing customer with an online account
+Existing Customer| Customer who can manage existing insurance policies
+
+---
+
+4. Insurance Portal – Main Capabilities
+
+The insurance portal provides self-service functionality.
+
+Quote & Bind
+
+- Customer can obtain an insurance quote.
+- Customer can proceed with binding the policy.
+
+Manage Your Policy
+
+For existing customers:
+
+- View/manage existing policies
+- Perform policy-related self-service activities
+
+Add-Ons
+
+- Add additional products/coverages to an existing or new policy, depending on eligibility.
+
+---
+
+5. Digital Insurance Flow
+
+The high-level process captured during KT is:
+
+Quote → Bind → Retrieve → Save & Return → Online Account Creation → Sign In
+
+Detailed Flow
+
+1. Quote
+   
+   - Customer starts the insurance quoting process.
+
+2. Bind
+   
+   - Customer proceeds with binding the selected insurance product.
+
+3. Retrieve
+   
+   - Customer can retrieve an existing quote/transaction.
+
+4. Save & Return
+   
+   - Customer can save the current progress and return later.
+
+5. Online Account Creation
+   
+   - A guest user can create an online account.
+
+6. Sign In
+   
+   - Once the account is created, the user can sign in and continue using the digital services.
+
+---
+
+6. Web Services / MTE
+
+MTE
+
+MTE = Mid-Term Endorsement
+
+This relates to changes/endorsements made to an existing insurance policy during the policy term.
+
+The KT notes indicate:
+
+MTE → Mid-Term Endorsement
+
+The MTE functionality is associated with the signed-in/existing customer experience and policy servicing.
+
+---
+
+7. State-Based Digital Experience
+
+The digital experience is state-dependent.
+
+The notes captured the following states for the AAA Select Auto product:
+
+- MI – Michigan
+- GA – Georgia
+- TN – Tennessee
+- FL – Florida
+- IL – Illinois
+- WI – Wisconsin
+- IA – Iowa
+- IN – Indiana
+- MN – Minnesota
+- NE – Nebraska
+
+Important
+
+The customer's ZIP code determines the applicable state experience and therefore the available products and functionality.
+
+---
+
+8. Products / Product Flows
+
+The KT notes mention multiple insurance products and product-specific flows.
+
+8.1 AAA Select Auto
+
+States mentioned:
+
+- Michigan (MI)
+- Georgia (GA)
+- Tennessee (TN)
+- Florida (FL)
+- Illinois (IL)
+- Wisconsin (WI)
+- Iowa (IA)
+- Indiana (IN)
+- Minnesota (MN)
+- Nebraska (NE)
+
+Digital Flow
+
+- Quote + Bind
+- In some state-specific flows, only Quote may be available.
+
+---
+
+8.2 AAA Bundle
+
+The AAA Bundle has state/product-specific digital flows.
+
+Possible flows noted:
+
+- Quote + Bind
+- Quote
+
+The exact flow depends on the applicable state and product configuration.
+
+---
+
+8.3 Florida P&C
+
+FL P&C is specifically associated with Florida.
+
+- State: Florida
+- Product/experience is specifically designed for Florida.
+
+---
+
+8.4 Home
+
+Home insurance is another product available through the digital experience.
+
+- Home
+- Quote functionality is available as noted during KT.
+
+---
+
+9. Meemic
+
+Meemic is another product/brand experience mentioned in the KT.
+
+Meemic Products
+
+Product| State
+Meemic Auto| MI
+Meemic Bundle| MI
+Meemic Home| MI
+
+Meemic Digital Flows
+
+Meemic Auto
+
+- Select Meemic Auto
+- State: MI
+- Flow: Quote + Bind
+
+Meemic Bundle
+
+- Meemic Bundle
+- State: MI
+- Flow: Quote + Bind
+
+Meemic Home
+
+- Select Meemic Home
+- State: MI
+- Flow: Quote
+
+---
+
+10. Digital Product / State Matrix
+
+Product| State(s) Mentioned| Digital Capability
+AAA Select Auto| MI, GA, TN, FL, IL, WI, IA, IN, MN, NE| Quote + Bind / state-specific Quote
+AAA Bundle| State dependent| Quote + Bind / Quote
+FL P&C| FL| Florida-specific experience
+Home| State dependent| Quote
+Meemic Auto| MI| Quote + Bind
+Meemic Bundle| MI| Quote + Bind
+Meemic Home| MI| Quote
+
+«Note: The exact availability of Quote, Bind, or Quote + Bind is dependent on the state/product configuration.»
+
+---
+
+11. Agent / Non-Digital Channels
+
+The KT also covered the EA Agents flow.
+
+EA Agents
+
+- EA Agents flow
+- Lead Aggregators
+- Agents
+- ABP Portal
+
+The high-level relationship captured was:
+
+Lead Aggregators → EA Agents → ABP Portal
+
+The exact business/process details should be validated in subsequent KT sessions.
+
+---
+
+12. AAA.com / Insurance Entry Point
+
+The main digital entry point discussed is:
+
+AAA.com
+
+The insurance experience can be accessed through the AAA digital ecosystem.
+
+A development/insurance-related URL noted during KT was:
+
+dev1.acg.aaa.com/insurance
+
+This appears to be a development environment/reference URL and should be treated separately from the production AAA.com experience.
+
+---
+
+13. End-to-End High-Level Understanding
+
+The overall digital insurance journey can be summarized as:
+
+Customer
+   ↓
+AAA.com
+   ↓
+Determine State based on ZIP Code
+   ↓
+Select Insurance Product
+   ↓
+Quote
+   ↓
+Bind
+   ↓
+Retrieve / Save & Return
+   ↓
+Online Account Creation
+   ↓
+Sign In
+   ↓
+Policy / Self-Service
+   ↓
+Manage Policy / Add-ons / MTE
+
+Guest User Journey
+
+Guest User
+   ↓
+Quote
+   ↓
+Bind
+   ↓
+Retrieve
+   ↓
+Save & Return
+   ↓
+Online Account Creation
+   ↓
+Sign In
+
+Existing / Signed-In User Journey
+
+Signed-In User
+   ↓
+Existing Customer
+   ↓
+Access Policy
+   ↓
+Manage Policy
+   ↓
+Self-Service
+   ↓
+Add-ons / MTE / Other Policy Services
+
+---
+
+14. Key KT Takeaways
+
+1. AAA.com is a major digital entry point.
+2. The digital experience supports web, mobile browser and mobile app channels.
+3. The customer's ZIP code determines the applicable state experience.
+4. ACG operates across multiple states.
+5. Insurance customers can be broadly viewed as Guest Users and Signed-In/Existing Customers.
+6. Guest users can start with a quote and progress toward binding and account creation.
+7. Signed-in users can perform policy self-service activities.
+8. Major digital insurance activities include:
+   - Quote
+   - Bind
+   - Retrieve
+   - Save & Return
+   - Online Account Creation
+   - Sign In
+   - Manage Policy
+   - Add-ons
+   - Mid-Term Endorsement (MTE)
+9. Product availability and functionality can vary by state.
+10. Products discussed include AAA Select Auto, AAA Bundle, FL P&C, Home, Meemic Auto, Meemic Bundle and Meemic Home.
+11. The agent ecosystem includes EA Agents, Lead Aggregators and the ABP Portal.
+12. MTE = Mid-Term Endorsement.
+
+---
+
+15. Items to Clarify in the Next KT
+
+The following points were mentioned but need more detail/confirmation:
+
+- Exact definition and responsibilities of ACG in the digital architecture.
+- Complete list of ACG operating states.
+- Detailed ZIP-code-to-state routing logic.
+- Difference between AAA Select Auto, AAA Bundle and FL P&C.
+- Exact Quote vs Quote + Bind availability by state.
+- Detailed EA Agent / Lead Aggregator / ABP Portal flow.
+- Detailed functionality of MTE.
+- Relationship between AAA.com, insurance portal and backend/web services.
+- Exact differences between Guest User and Signed-In User at each stage.
+- Detailed Meemic product flows and MI-specific functionality.
+- Environment details for "dev1.acg.aaa.com/insurance".
