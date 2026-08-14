@@ -1,0 +1,692 @@
+Foundations KT – Session 2
+
+ACG Digital & Insurance – KT Notes
+
+KT Date: 14-Aug-2026
+Topic: ACG Digital, Meemic, Insurance Platform, Tools, Environments & Quote Flow
+
+«Note: Names/abbreviations are transcribed from the handwritten KT notes. A few names were difficult to read and may need confirmation during the next KT.»
+
+---
+
+1. ACG & Meemic Overview
+
+ACG – Auto Club Group
+
+ACG is the organization/business group discussed during the KT session.
+
+Meemic
+
+- Meemic is a sister concern of ACG.
+- Meemic is primarily designed for educators/teachers in Michigan.
+- Meemic operates as part of the broader ACG ecosystem.
+
+Digital Entry Point
+
+- AAA.com is one of the primary digital entry points discussed during KT.
+- The digital insurance experience supports customer-facing insurance journeys.
+
+---
+
+2. Key Stakeholders
+
+2.1 ACG QA Team
+
+Name| Role / Responsibility
+Ashwanth| ACG QA
+Ramya| ACG QA
+Rashmi| Point of Contact for Digital
+Rashmi| ACG QA Manager – Digital & Membership
+
+Key Contact
+
+Rashmi
+
+- Point of contact for Digital.
+- QA Manager responsible for Digital and Membership.
+
+---
+
+3. ACG IT Team
+
+Name| Role
+Bala Ramasamy| AVP – Digital
+Anil Rai| ACG IT Lead
+Peteri Lesha Sai Ram| ACG IT Lead
+
+---
+
+4. ACG Architecture Team
+
+Name| Area
+Mahesh Babu| Digital
+[Name to confirm] Charleson| Mobile Application
+Jason Owens| Project Manager – Mobile Application
+
+---
+
+5. ACG Digital Business
+
+The following stakeholders were mentioned from the ACG Digital Business/Leadership team:
+
+Name| Role / Area
+Samar Fani| Digital Business Lead
+Odo Laurie| Digital Business
+Sathish Edamackera| Digital Business
+Sri Gopalan| Leadership
+
+---
+
+6. Additional Digital Contacts
+
+The notes also mention:
+
+- Kevin/Kavin Kannan – POC for Digital from Corporate
+- Kanish Sahani – CPO / AAA Digital
+
+«Note: Exact spelling and titles should be confirmed with the team.»
+
+---
+
+7. Tools & Access
+
+7.1 Test Management
+
+Jira
+
+- Jira is used for test management.
+- Test cases/issues and testing-related activities are managed through Jira.
+
+---
+
+7.2 Browsers
+
+Web Browsers
+
+The digital application supports/testing includes:
+
+- Google Chrome
+- Microsoft Edge
+- Firefox
+- Safari
+
+Mobile Browsers
+
+- Android Chrome
+- iOS Safari
+
+Mac
+
+- Safari
+
+---
+
+8. Mobile Application Testing
+
+Mobile App Access
+
+The notes mention pCloudy as the cloud-based mobile testing platform.
+
+- Mobile application testing can be performed through pCloudy.
+- The required devices are hosted in the cloud.
+- Access is provided through the pCloudy web portal.
+- This allows the team to test the mobile application without requiring all physical devices locally.
+
+Device Testing
+
+- Majority of mobile/device testing is performed through pCloudy.
+- Limited testing may also be performed on physical Android devices.
+
+---
+
+9. AWS CloudWatch
+
+AWS CloudWatch
+
+AWS CloudWatch is used for log monitoring.
+
+Primary purpose:
+
+- Monitor application logs.
+- Validate exceptions/errors.
+- Investigate issues occurring during application flows.
+- Help identify backend/application failures.
+
+---
+
+10. Digital Insurance Platform
+
+Guidewire
+
+The digital insurance platform is integrated with Guidewire.
+
+Important Points
+
+- The majority of insurance-related data is stored in Guidewire.
+- Guidewire is a key backend system for the digital insurance application.
+- Guidewire PolicyCenter should be up and running for accessing/testing the digital insurance functionality.
+
+Environment Dependency
+
+Before starting testing:
+
+1. Verify that the required Guidewire environment is available.
+2. Ensure Guidewire PolicyCenter is up and running.
+3. Verify that the digital application is accessible.
+4. Check that required integrations are available.
+
+---
+
+11. Environment & Integration Challenges
+
+The following challenges were discussed during KT.
+
+Environment Availability
+
+- The environment may occasionally go down.
+- Before starting testing, verify environment availability.
+- Any deployment should be monitored/validated to ensure that the application is available after deployment.
+
+Integration Issues
+
+Integration issues may occur between:
+
+- Digital application
+- Guidewire
+- Other backend/integrated systems
+
+Data Issues
+
+- Test data availability can impact testing.
+- Incorrect or incomplete data can cause failures during the quote process.
+
+Business Rules
+
+- Business rules may affect the quote journey.
+- The team needs to understand how different quote actions are processed based on business rules.
+
+---
+
+12. Test Data
+
+A test-data process was discussed during the KT.
+
+Test Data Flow
+
+- Test data is obtained/prepared through the relevant data/service team.
+- The QA team uses the prepared data for testing.
+- Data should be available before beginning the quote flow.
+
+Customer Information
+
+The quote journey requires customer information such as:
+
+- First Name
+- Last Name
+- Suffix
+- Date of Birth
+- Email Address
+- Mobile/Contact Number
+
+After entering the required customer information:
+
+→ Continue
+
+---
+
+13. Digital Insurance Quote Flow
+
+The high-level quote journey discussed during KT is:
+
+AAA.com / Digital Application
+            ↓
+      Quote Process
+            ↓
+    Customer Information
+            ↓
+          Address
+            ↓
+       Vehicle Details
+            ↓
+          Drivers
+            ↓
+        Discounts
+            ↓
+           Quote
+            ↓
+        Coverages
+
+---
+
+14. Quote Flow – Detailed Steps
+
+Step 1 – Start Quote
+
+The user enters the digital insurance application and starts the quote process.
+
+The QA team needs to ensure:
+
+- Application is accessible.
+- Required backend systems are available.
+- Guidewire PolicyCenter is running.
+
+---
+
+Step 2 – Customer Information
+
+The customer enters:
+
+- First Name
+- Last Name
+- Suffix
+- DOB
+- Email Address
+- Mobile/Contact Number
+
+Then:
+
+→ Continue
+
+---
+
+Step 3 – Address
+
+The user enters the required address information.
+
+Then:
+
+→ Continue
+
+---
+
+15. Milestone / Header Details
+
+The quote journey uses headers/milestones to indicate the different stages of the process.
+
+The flow progresses through the relevant sections of the quote journey.
+
+Example:
+
+Customer Details
+      ↓
+Address
+      ↓
+Vehicles
+      ↓
+Drivers
+      ↓
+Discounts
+      ↓
+Quote
+      ↓
+Coverages
+
+---
+
+16. Vehicle Details
+
+The vehicle section requires the user to enter a VIN number.
+
+VIN Flow
+
+1. Enter VIN number.
+2. System validates the VIN.
+3. Vehicle details are retrieved.
+4. The retrieved vehicle information is displayed.
+5. User can review the vehicle information.
+6. User can:
+   - Edit
+   - Remove
+   - Continue
+
+Backend Integration
+
+The notes indicate that an internal call is made to backend systems such as:
+
+- Guidewire
+- Salesforce
+
+These integrations are involved in processing/retrieving vehicle/customer-related information.
+
+---
+
+17. Adding a Vehicle
+
+Once the vehicle is added:
+
+Vehicle Added → Continue
+
+The user can then proceed to the next stage of the quote journey.
+
+---
+
+18. Bundling / Additional Products
+
+The bundling section provides options such as:
+
+Add Home
+
+Allows the user to add a Home insurance product.
+
+Add Renters
+
+Allows the user to add Renters insurance.
+
+Add Condo
+
+Allows the user to add Condo insurance.
+
+The user can choose the relevant additional insurance product and continue with the quote.
+
+Example
+
+Bundling
+   ├── Add Home
+   ├── Add Renters
+   └── Add Condo
+
+             ↓
+
+       Continue with Auto
+
+---
+
+19. Quote Journey – Main Sections
+
+The main sections captured during KT are:
+
+Details
+   ↓
+Vehicles
+   ↓
+Drivers
+   ↓
+Discounts
+   ↓
+Quote
+   ↓
+Coverages
+
+Details
+
+Customer and address information.
+
+Vehicles
+
+Vehicle/VIN information and vehicle validation.
+
+Drivers
+
+Driver-related information.
+
+Discounts
+
+Applicable discounts based on customer/vehicle information.
+
+Quote
+
+The system generates the insurance quote.
+
+Coverages
+
+The final stage discussed in the notes involves navigating to/selecting the applicable coverages.
+
+---
+
+20. Data Sources
+
+The notes indicate that data used during the quote process comes primarily from:
+
+Guidewire
+
+- Majority of insurance-related data.
+- Policy/quote-related information.
+- Backend insurance processing.
+
+Integrations
+
+- Some data is received through integrated systems.
+- The exact source depends on the specific information being requested.
+
+High-Level View
+
+Digital Application
+       ↓
+    Integration
+       ↓
+   Guidewire
+       ↓
+ Insurance Data
+       ↓
+ Digital UI
+
+---
+
+21. Browser & Device Testing Strategy
+
+Web
+
+Primary browsers mentioned:
+
+Platform| Browser
+Windows/Web| Google Chrome
+Windows/Web| Microsoft Edge
+Windows/Web| Firefox
+Mac| Safari
+
+Mobile
+
+Platform| Browser
+Android| Chrome
+iOS| Safari
+
+Mobile Application
+
+- Test primarily through pCloudy.
+- Limited testing may be performed on physical Android devices.
+
+---
+
+22. pCloudy
+
+Purpose
+
+pCloudy is used to access cloud-hosted mobile devices for application testing.
+
+High-Level Flow
+
+QA Engineer
+     ↓
+pCloudy Portal
+     ↓
+Select Device
+     ↓
+Access Mobile Environment
+     ↓
+Install/Launch Application
+     ↓
+Execute Test Cases
+
+Key Point
+
+The majority of device testing is performed using cloud-hosted devices, while limited testing is performed on physical devices.
+
+---
+
+23. AWS CloudWatch – Troubleshooting
+
+When an issue occurs during testing:
+
+Issue in Digital Application
+          ↓
+Check Application Behaviour
+          ↓
+Check Integration
+          ↓
+Check Guidewire
+          ↓
+Check Logs
+          ↓
+AWS CloudWatch
+          ↓
+Identify Exceptions / Errors
+
+CloudWatch logs can help the QA team validate whether the issue is related to:
+
+- Application
+- Backend
+- Integration
+- Environment
+- Data
+
+---
+
+24. Important Environment Dependencies
+
+Before executing the quote flow, verify:
+
+- Digital application is available.
+- Guidewire is up and running.
+- Guidewire PolicyCenter is accessible.
+- Required integrations are available.
+- Test data is available.
+- Required user/device access is available.
+- pCloudy is accessible for mobile testing.
+- Required deployment is completed successfully.
+
+---
+
+25. Key Challenges Identified
+
+1. Environment Downtime
+
+The environment may go down unexpectedly.
+
+Action:
+
+- Verify environment status before testing.
+- Check deployment status when required.
+
+2. Integration Issues
+
+Problems may occur between the digital application and backend systems.
+
+Action:
+
+- Validate integrations.
+- Check relevant logs.
+
+3. Data Issues
+
+Incorrect or unavailable test data can prevent quote execution.
+
+Action:
+
+- Ensure valid test data is available.
+- Verify data before starting the test.
+
+4. Business Rules
+
+Different quote actions may behave differently depending on business rules.
+
+Action:
+
+- Understand the applicable business rules.
+- Validate expected behaviour for each scenario.
+
+---
+
+26. Practical QA Approach
+
+A recommended execution approach based on the KT discussion:
+
+1. Check Environment
+        ↓
+2. Verify Guidewire PolicyCenter
+        ↓
+3. Verify Digital Application
+        ↓
+4. Verify Test Data
+        ↓
+5. Login / Access Application
+        ↓
+6. Start Quote
+        ↓
+7. Enter Customer Details
+        ↓
+8. Enter Address
+        ↓
+9. Add Vehicle / VIN
+        ↓
+10. Validate Vehicle Details
+        ↓
+11. Add / Validate Drivers
+        ↓
+12. Apply / Validate Discounts
+        ↓
+13. Generate Quote
+        ↓
+14. Navigate to Coverages
+        ↓
+15. Validate Backend / Integration
+        ↓
+16. Check Logs if Issues Occur
+
+---
+
+27. Key Takeaways from KT Session 2
+
+1. Meemic is a sister concern of ACG and is primarily focused on educators/teachers in Michigan.
+2. AAA.com is an important digital entry point.
+3. ACG has dedicated QA, IT, Architecture and Digital Business teams.
+4. Jira is used for test management.
+5. pCloudy is used for cloud-based mobile device testing.
+6. Web testing covers major browsers such as Chrome, Edge, Firefox and Safari.
+7. Mobile browser testing includes Android Chrome and iOS Safari.
+8. AWS CloudWatch is used for log monitoring and exception validation.
+9. Guidewire is a major backend system for digital insurance.
+10. Guidewire PolicyCenter must be up and running for relevant digital insurance testing.
+11. Test data is an important dependency for quote testing.
+12. The quote flow involves:
+    - Customer Details
+    - Address
+    - Vehicles
+    - Drivers
+    - Discounts
+    - Quote
+    - Coverages
+13. VIN is used to retrieve/validate vehicle information.
+14. Backend integrations include Guidewire and Salesforce, as captured in the KT.
+15. The bundling journey can include:
+    - Home
+    - Renters
+    - Condo
+16. Environment availability, integrations, data and business rules are key areas to consider during troubleshooting.
+17. CloudWatch logs can be used to investigate exceptions when issues occur.
+
+---
+
+28. Items to Clarify in Future KT Sessions
+
+The following areas would be useful to cover in the next KT:
+
+- Complete ACG architecture.
+- Digital application architecture.
+- Detailed Guidewire integration.
+- Salesforce integration and responsibilities.
+- API flow between Digital → Integration → Guidewire.
+- Exact test-data creation process.
+- Different test-data scenarios.
+- Complete browser/device compatibility matrix.
+- Detailed pCloudy access process.
+- Quote business rules.
+- Driver and discount rules.
+- Detailed coverages flow.
+- Error-handling scenarios.
+- Environment URLs and environment mapping.
+- Deployment process and ownership.
+- Detailed logging/troubleshooting process using AWS CloudWatch.
+- Complete end-to-end Quote → Bind journey.
+- How saved quotes are retrieved.
+- Guest user vs signed-in user behaviour.
+- Meemic-specific digital flows.
