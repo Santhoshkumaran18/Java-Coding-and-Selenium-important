@@ -1,0 +1,657 @@
+Foundational Digital KT – Session 3
+
+Digital Insurance – Quote, Coverage, Environment & Testing
+
+KT Date: 17-Aug-2026
+Session: Foundational Digital KT – 3
+
+---
+
+1. Session Overview
+
+This session continued from the previous KT and focused on the digital insurance quote journey, specifically using Nebraska (NE) as the example state.
+
+The session covered:
+
+- Initiating an insurance quote
+- Coverage selection
+- Premium calculation
+- Date handling
+- Environment management
+- Vehicle ownership information
+- Membership types
+- Mobile session availability
+- CloudWatch log investigation
+- Test strategy and planning
+- Strategic initiatives
+- Document Management Services (DMS)
+- Vendor data
+- API testing
+- Automation coverage
+- Geographic/AAA-drive-based scenarios
+
+---
+
+2. Quote Journey – Nebraska
+
+The session demonstrated the process of initiating a quote for the Nebraska state.
+
+Starting Point
+
+The flow continues from the previous KT session.
+
+Previous Quote Flow
+       ↓
+Select Your Quote
+       ↓
+Continue to Coverages
+       ↓
+Coverage Selection
+       ↓
+Premium Calculation
+
+Coverage
+
+After selecting the quote:
+
+Select Your Quote → Continue to Coverages
+
+The applicable premium/amount is calculated based on the selected quote and coverage information.
+
+---
+
+3. Quote Date
+
+The quote/policy date is handled through Guidewire.
+
+Important Point
+
+The date is automatically locked from Guidewire.
+
+Therefore:
+
+- The date cannot be freely changed from the Digital UI.
+- The date needs to be configured/set at the Guidewire level.
+- If a different date is required for testing, the appropriate Guidewire configuration/test-data setup needs to be considered.
+
+Testing Consideration
+
+When validating date-related scenarios:
+
+Digital Application
+       ↓
+Guidewire
+       ↓
+Date Configuration
+       ↓
+Digital Quote
+
+---
+
+4. Environment Management
+
+Environment management is important because the environment URL can change.
+
+Environment Management Responsibility
+
+Environment management is used for:
+
+- Managing environment changes
+- Handling changes to environment URLs
+- Maintaining the correct environment configuration
+- Supporting environment-related changes required for testing
+
+QA Consideration
+
+Before starting testing, confirm:
+
+- Correct environment
+- Environment availability
+- Correct URL/configuration
+- Required backend systems are available
+
+---
+
+5. Quote Completion Flow
+
+The notes capture the later stages of the quote journey as:
+
+Quote
+  ↓
+BH / [To Confirm]
+  ↓
+Policy
+  ↓
+Payment
+  ↓
+E-Sign
+
+«Note: The exact meaning of “BH” should be confirmed in a future KT session because the handwritten note is abbreviated.»
+
+These represent the downstream stages after the main quote/coverage process.
+
+---
+
+6. Vehicle Ownership Information
+
+Vehicle ownership information needs to be collected as part of the quote process.
+
+This information is required after/within the quote journey to support the policy/vehicle details.
+
+High-Level Flow
+
+Quote
+   ↓
+Vehicle Details
+   ↓
+Vehicle Ownership Information
+   ↓
+Continue Quote Process
+
+---
+
+7. Membership Types
+
+The KT notes mention the following AAA membership types:
+
+AAA Classic Membership
+
+- Standard AAA membership type.
+
+AAA Everyday Membership
+
+- Another AAA membership type.
+
+Existing AAA Member
+
+If the customer is already an AAA member:
+
+- The user should provide the AAA Membership ID.
+- The membership ID is used to identify/validate the existing membership.
+
+Important Testing Scenario
+
+Existing AAA Member
+        ↓
+Enter AAA Membership ID
+        ↓
+Validate Membership
+        ↓
+Continue Quote
+
+---
+
+8. Mobile Session Availability
+
+Mobile sessions need to be scheduled based on device availability.
+
+Key Point
+
+Mobile testing sessions should be scheduled according to the availability of the required devices.
+
+This is particularly relevant when using cloud-based device testing platforms.
+
+Testing Consideration
+
+Before scheduling mobile execution:
+
+- Check device availability.
+- Select the required mobile device/platform.
+- Schedule the testing session.
+- Execute the required scenarios.
+
+---
+
+9. CloudWatch Log Investigation
+
+AWS CloudWatch is used for log investigation.
+
+Searching Logs
+
+To search CloudWatch logs:
+
+1. Identify the required query/search criteria.
+2. Enter the query in CloudWatch.
+3. Retrieve the relevant message/log entries.
+4. Use the results to investigate the issue.
+
+High-Level Flow
+
+Issue Observed
+      ↓
+Identify Relevant Time/Transaction
+      ↓
+Prepare CloudWatch Query
+      ↓
+Search Message Logs
+      ↓
+Review Logs
+      ↓
+Identify Error / Exception
+      ↓
+Continue Investigation
+
+Important Point
+
+The search query needs to be appropriately constructed based on what needs to be investigated.
+
+---
+
+10. Coverage Screen – Explanation
+
+The Coverage Screen is an important stage of the quote journey.
+
+The screen allows the user to review/select applicable insurance coverages.
+
+The premium/amount is calculated based on the quote and selected coverage information.
+
+High-Level Flow
+
+Quote
+  ↓
+Coverage Screen
+  ↓
+Select / Review Coverages
+  ↓
+Premium Calculation
+  ↓
+Continue
+
+---
+
+11. Test Strategy & Test Plan
+
+The KT introduced the concept of the Digital SIT and release-based testing.
+
+Digital SIT
+
+Digital SIT → Release
+
+The testing strategy is planned based on the release cycle.
+
+Strategic Initiatives
+
+Strategic initiatives are considered while planning the testing scope.
+
+The test plan needs to identify:
+
+- Release scope
+- Functional changes
+- Strategic initiatives
+- Impacted digital journeys
+- Regression scope
+- Automation coverage
+- Required test environments
+- Required test data
+
+---
+
+12. Program Areas
+
+The notes identify the following areas under the digital program:
+
+- Digital Pricing Rules
+- MPD
+- Profile
+
+These areas should be considered when understanding the broader digital ecosystem and testing scope.
+
+«Note: The exact expansion/definition of MPD should be confirmed during a future KT.»
+
+---
+
+13. Screenshot Evidence
+
+For testing/reporting purposes:
+
+- Screenshots should be captured for relevant test scenarios.
+- The screenshot/evidence should be appended or stored appropriately.
+- High-level test events may require supporting screenshots.
+- Images may need to be appended to the relevant test evidence.
+
+Expected Evidence Flow
+
+Execute Test
+    ↓
+Capture Screenshot
+    ↓
+Attach/Append Evidence
+    ↓
+Update Test Result
+
+---
+
+14. High-Level Test Event
+
+The notes mention:
+
+High-Level Test Event
+
+For a high-level test event:
+
+- Relevant test scenarios should be identified.
+- Required screenshots/evidence should be captured.
+- The evidence should be appended to the test event/results.
+
+---
+
+15. Strategic Initiative – ST2
+
+The notes mention:
+
+ST2 → Membership and Salesforce
+
+Membership and Salesforce are identified as major components of the strategic initiative.
+
+ST2 Areas
+
+ST2
+ ├── Membership
+ └── Salesforce
+
+These areas may therefore have significant impact on the digital testing scope.
+
+---
+
+16. DMS – Document Management Services
+
+DMS
+
+DMS = Document Management Services
+
+DMS is another component mentioned as part of the digital ecosystem.
+
+The purpose/flow should be understood in relation to how documents are generated, stored, retrieved, or managed within the digital process.
+
+---
+
+17. Vendor Data
+
+The notes mention:
+
+Verisk → Provides vendor data
+
+Verisk
+
+Verisk is used as a source/provider of vendor-related data within the ecosystem.
+
+The exact data elements and integration points should be covered in a subsequent KT.
+
+---
+
+18. Mobile Experience
+
+The notes indicate that:
+
+- Digital has a mobile experience/application.
+- Mobile sessions need to be scheduled depending on device availability.
+- Mobile testing is performed using available cloud/physical devices as applicable.
+
+This should be considered separately from desktop/web browser testing.
+
+---
+
+19. API Testing
+
+The notes mention:
+
+API Testing → Postman
+
+Postman is used for API testing/validation.
+
+API Testing Scope
+
+Potential API testing activities include:
+
+- Sending API requests
+- Validating response status
+- Validating response payload
+- Checking request/response data
+- Validating integrations
+- Investigating backend issues
+
+High-Level Flow
+
+Postman
+   ↓
+API Request
+   ↓
+Backend / Integration
+   ↓
+API Response
+   ↓
+Validate Response
+
+---
+
+20. Security Testing
+
+The KT notes specifically state:
+
+Security testing is not in scope for ACG.
+
+Therefore, the current testing focus is primarily on:
+
+- Functional testing
+- Integration testing
+- API testing
+- Regression testing
+- Automation
+- Digital user journeys
+
+«Note: Scope can change based on project/release requirements, so this should be reconfirmed if the testing scope changes.»
+
+---
+
+21. Automation Coverage
+
+The current automation coverage is approximately:
+
+70–80% of test cases are automated
+
+The remaining scenarios may not be suitable for automation.
+
+Reasons for Non-Automation
+
+Some scenarios may depend on:
+
+- Geographic variations
+- AAA Drive-related functionality
+- Location-specific behaviour
+- Scenarios that are difficult/not practical to automate
+
+Automation Strategy
+
+Total Test Cases
+       ↓
+   70–80%
+ Automated
+       +
+ Remaining
+ Manual / Special Scenarios
+
+---
+
+22. Geographic & AAA Drive Scenarios
+
+Some scenarios are not automated because they depend on:
+
+- Geographic location
+- AAA Drive functionality
+- Location-specific behaviour/data
+
+These scenarios may require manual validation or special test setup.
+
+Testing Consideration
+
+When creating the automation scope:
+
+- Identify stable/repeatable scenarios for automation.
+- Separate location-dependent scenarios.
+- Identify AAA Drive-specific scenarios.
+- Keep non-automatable scenarios within the appropriate manual regression scope.
+
+---
+
+23. Overall Digital Testing Ecosystem
+
+Based on the KT sessions so far, the digital testing ecosystem can be viewed as:
+
+                         DIGITAL
+                            │
+        ┌───────────────────┼───────────────────┐
+        │                   │                   │
+      Web                 Mobile              APIs
+        │                   │                   │
+ Chrome / Edge          Mobile Devices       Postman
+ Firefox / Safari          │
+        │                pCloudy
+        │
+        └───────────────┬───────────────────────┘
+                        │
+                   Integrations
+                        │
+          ┌─────────────┼─────────────┐
+          │             │             │
+      Guidewire      Salesforce     Verisk
+          │             │             │
+          └─────────────┼─────────────┘
+                        │
+                  AWS CloudWatch
+                        │
+                   Log Analysis
+
+---
+
+24. Quote Journey – Combined Understanding
+
+Combining the previous KT sessions with Session 3, the broader quote journey can be represented as:
+
+AAA.com / Digital
+        ↓
+Select State / Product
+        ↓
+Start Quote
+        ↓
+Customer Details
+        ↓
+Address
+        ↓
+Vehicles
+        ↓
+Drivers
+        ↓
+Discounts
+        ↓
+Quote
+        ↓
+Coverage Screen
+        ↓
+Premium Calculation
+        ↓
+Vehicle Ownership Information
+        ↓
+Membership
+        ↓
+Policy
+        ↓
+Payment
+        ↓
+E-Sign
+
+Some steps may vary depending on:
+
+- State
+- Product
+- Customer type
+- Membership
+- Business rules
+- Quote configuration
+
+---
+
+25. QA Checklist – Before Testing
+
+Before executing a quote scenario:
+
+- [ ] Confirm the correct environment.
+- [ ] Verify the environment is available.
+- [ ] Verify Guidewire is up and running.
+- [ ] Verify required integrations are available.
+- [ ] Verify test data.
+- [ ] Confirm the state/product being tested.
+- [ ] Confirm membership requirements.
+- [ ] Verify mobile device availability if mobile testing is required.
+- [ ] Confirm relevant test cases.
+- [ ] Confirm release/SIT scope.
+- [ ] Confirm automation vs manual scope.
+
+---
+
+26. QA Checklist – During Testing
+
+- [ ] Start the quote.
+- [ ] Enter customer details.
+- [ ] Enter address.
+- [ ] Add/validate vehicle.
+- [ ] Validate vehicle ownership information.
+- [ ] Add/validate drivers.
+- [ ] Validate discounts.
+- [ ] Validate quote.
+- [ ] Navigate to Coverage Screen.
+- [ ] Validate premium calculation.
+- [ ] Validate membership information.
+- [ ] Continue to policy/payment/e-sign where applicable.
+- [ ] Capture required screenshots/evidence.
+- [ ] Validate API/integration behaviour where required.
+- [ ] Check CloudWatch logs if an issue occurs.
+
+---
+
+27. Important KT Takeaways
+
+1. The Session 3 demonstration focused on initiating/continuing a Nebraska quote.
+2. The quote continues to the Coverage Screen.
+3. Premium/amount is calculated based on the applicable quote/coverage information.
+4. The quote date is controlled through Guidewire and is not freely editable from the Digital UI.
+5. Environment management is important because environment-related URLs/configurations can change.
+6. The downstream flow includes Policy → Payment → E-Sign, with an intermediate stage noted as BH that needs confirmation.
+7. Vehicle ownership information is part of the quote process.
+8. AAA membership types discussed include AAA Classic and AAA Everyday.
+9. Existing AAA members may need to provide their AAA Membership ID.
+10. Mobile testing sessions need to be scheduled based on device availability.
+11. AWS CloudWatch is used for log searching and issue investigation.
+12. Digital SIT and release planning drive the test strategy.
+13. Strategic initiatives include areas such as Membership and Salesforce.
+14. DMS = Document Management Services.
+15. Verisk is a vendor-data provider mentioned in the ecosystem.
+16. Postman is used for API testing.
+17. Security testing is currently noted as out of scope for ACG.
+18. Approximately 70–80% of test cases are automated.
+19. Some scenarios remain manual because of geographic and AAA Drive dependencies.
+20. Screenshot evidence is required for applicable high-level test events.
+
+---
+
+28. Points to Clarify in Next KT
+
+The following items should be confirmed in future sessions:
+
+- Exact meaning of BH in the Quote → BH → Policy → Payment → E-Sign flow.
+- Exact date configuration process in Guidewire.
+- Environment management process and environment ownership.
+- Exact definition of MPD.
+- Detailed Digital Pricing Rules.
+- Detailed Profile functionality.
+- Complete ST2 Membership + Salesforce flow.
+- DMS architecture and integration.
+- Exact Verisk data and integration points.
+- Detailed API architecture and Postman collection structure.
+- CloudWatch query format and commonly used search parameters.
+- Exact mobile device/session scheduling process.
+- Complete Nebraska-specific business rules.
+- Quote-to-policy transition.
+- Payment and E-Sign flow.
+- Detailed coverage-selection rules.
+- Complete automation framework and automation execution process.
+- List of scenarios excluded from automation because of geography/AAA Drive.
