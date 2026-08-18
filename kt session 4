@@ -1,0 +1,710 @@
+ETCOE Foundational Digital KT – Session 4
+
+ACG Digital – E2E Testing Strategy, Data Management & Integrations
+
+KT Date: 18-Aug-2026
+Day: Tuesday
+Session: ETCOE Foundation KT – Digital – Session 4
+
+---
+
+1. Session Overview
+
+This session focused on the ACG Digital End-to-End (E2E) Testing Strategy, including:
+
+- E2E testing approach
+- Digital environment connectivity
+- Quote and Bind journey
+- Early Business Validation / Testing
+- Test-data management
+- Vendor data
+- Environment management
+- Mobile testing
+- Integrations
+- QA reporting and dashboards
+- Test execution and defect management
+
+---
+
+2. ACG Digital – E2E Testing Strategy
+
+The overall objective of E2E testing is to validate the complete Digital journey across the application and its dependent backend/integration systems.
+
+High-Level E2E Flow
+
+AEM
+ ↓
+Entry Point
+ ↓
+AWS Digital Environment (GA)
+ ↓
+Digital Application
+ ↓
+Quote
+ ↓
+Bind
+ ↓
+Backend / Database / Integrations
+ ↓
+E2E Validation
+
+Key Point
+
+The E2E testing will be performed in the same environment used for the relevant Digital process.
+
+The objective is to validate that the complete journey works correctly across:
+
+- Digital UI
+- Backend systems
+- Databases
+- External/vendor integrations
+- Business processes
+
+---
+
+3. AEM – Entry Point
+
+AEM
+
+AEM is identified as an entry point into the Digital application.
+
+The flow discussed was:
+
+AEM → Entry Point → AWS Digital Environment (GA)
+
+From there, the team can execute the complete:
+
+Quote → Bind
+
+process.
+
+---
+
+4. Internal Testing
+
+Internal testing is performed before/alongside the broader E2E validation.
+
+The notes indicate that internal testing is handled by the engagement/project team.
+
+«Note: The exact team name written in the notes is unclear and should be confirmed.»
+
+---
+
+5. E2E Testing Environment
+
+Same Environment
+
+The E2E testing will be performed in the same environment.
+
+This is important because the complete journey depends on multiple systems and integrations being available together.
+
+E2E Validation Includes
+
+- Digital application
+- Quote flow
+- Bind flow
+- Backend services
+- Database validation
+- External integrations
+- Vendor data
+- Business validation
+
+---
+
+6. Early Business Validation & Early Business Testing
+
+Two terms were discussed during the KT:
+
+EBV – Early Business Validation
+
+EBV refers to early validation of the Digital functionality/business flow before the complete testing cycle.
+
+EBT – Early Business Testing
+
+EBT refers to early testing performed to identify issues before the broader E2E execution.
+
+Purpose
+
+Early validation/testing helps identify:
+
+- Functional issues
+- Data issues
+- Integration issues
+- Environment problems
+- Business-rule issues
+
+before the full E2E cycle.
+
+---
+
+7. Test Data Management
+
+Test data is a major dependency for E2E testing.
+
+The notes mention coordination with:
+
+- Data Team
+- Database teams
+- Vendor data providers
+- Environment Management
+
+Data Team
+
+A dedicated Data Team is involved in providing/supporting the required test data.
+
+Database validation is also part of the overall E2E testing strategy.
+
+---
+
+8. MVR – Motor Vehicle Records
+
+MVR
+
+MVR = Motor Vehicle Records
+
+MVR is one of the external/data sources involved in the insurance process.
+
+The Digital application may require motor vehicle-related information as part of the quote journey.
+
+High-Level Flow
+
+Digital Quote
+     ↓
+MVR Request
+     ↓
+Motor Vehicle Data
+     ↓
+Digital / Backend Processing
+     ↓
+Quote
+
+---
+
+9. Verisk
+
+Verisk – Vendor Data Provider
+
+Verisk is identified as a vendor/data provider.
+
+Verisk-related data is used as part of the Digital insurance process and test-data requirements.
+
+Testing Consideration
+
+When testing scenarios involving vendor-provided data, QA needs to validate:
+
+- Data availability
+- Correct data returned
+- Integration behaviour
+- Error scenarios
+- Expected business behaviour
+
+---
+
+10. Test Data Delivery Process
+
+The notes indicate that test-data delivery previously took approximately:
+
+4–6 weeks
+
+However, the process has now changed.
+
+Previous Approach
+
+Request Data
+    ↓
+Data Preparation
+    ↓
+Wait for Data
+    ↓
+Testing
+
+Updated Approach
+
+The process has moved toward a portal-based approach, where data can be fetched based on applicable conditions.
+
+Portal
+  ↓
+Specify / Meet Required Conditions
+  ↓
+Fetch Required Data
+  ↓
+Use Data for Testing
+
+Benefit
+
+This reduces dependency on long manual data-provisioning timelines and should improve test-data availability.
+
+«Note: The exact portal name and detailed conditions should be confirmed in a future KT.»
+
+---
+
+11. Environment Management
+
+QAEM
+
+The notes identify:
+
+QAEM → Environment Management Team
+
+The Environment Management team is responsible for environment-related activities.
+
+Responsibilities
+
+Potential activities include:
+
+- Environment availability
+- Environment setup
+- Environment changes
+- Environment configuration
+- Deployment coordination
+- Supporting testing teams with required environments
+
+---
+
+12. Mobile Testing
+
+pCloudy
+
+The notes mention:
+
+pCloudy → Mobile-related testing
+
+pCloudy is used to support mobile application/device testing.
+
+The tool allows QA to access required mobile devices for testing.
+
+Mobile Testing Flow
+
+QA
+ ↓
+pCloudy
+ ↓
+Select Required Device
+ ↓
+Launch Mobile Application
+ ↓
+Execute Test
+ ↓
+Capture Results
+
+---
+
+13. Mobile Device Availability
+
+The notes indicate that the list of devices used for mobile testing will be provided by Shiny.
+
+Mobile Testing Preparation
+
+1. Obtain the supported device list.
+2. Identify the required devices for the test scenario.
+3. Check device availability.
+4. Schedule/access the device.
+5. Execute mobile test cases.
+
+«Note: The exact name/role of the person/team mentioned as “Shiny” should be confirmed.»
+
+---
+
+14. QA Team – Timeline & Completion
+
+The QA team is responsible for defining/testing against the required timelines and working toward completion of the testing scope.
+
+QA Responsibilities
+
+- Plan testing activities.
+- Define timelines.
+- Execute test scenarios.
+- Track execution.
+- Report defects.
+- Track completion.
+- Coordinate with Business and other teams.
+- Provide E2E testing status/results.
+
+---
+
+15. E2E Test Review & Business Approval
+
+The E2E process includes review of:
+
+- Test scenarios
+- Test execution results
+- Business validation
+- Defects/issues
+- Final test results
+
+The results are reviewed with the Business team and require appropriate approval/sign-off.
+
+High-Level Process
+
+Test Execution
+      ↓
+Results
+      ↓
+QA Review
+      ↓
+Business Review
+      ↓
+Approval / Sign-off
+
+---
+
+16. QA Dashboard
+
+A QA Dashboard is used to provide visibility into testing activities.
+
+The dashboard provides information related to testing status and progress.
+
+Typical Information
+
+- Test execution status
+- Pass/Fail results
+- Defects
+- Test progress
+- Completion status
+- Overall testing metrics
+
+---
+
+17. Test Execution
+
+The KT notes identify the following areas:
+
+Test Execution
+
+Tracking actual execution of the planned test cases.
+
+Test Story
+
+Tracking the relevant testing story/work item.
+
+Defect Details
+
+Tracking defects identified during execution.
+
+High-Level Relationship
+
+Test Story
+    ↓
+Test Cases
+    ↓
+Test Execution
+    ↓
+Pass / Fail
+    ↓
+Defect Details
+    ↓
+Retesting
+    ↓
+Closure
+
+---
+
+18. EOTR Reports
+
+The notes mention EOTR Reports.
+
+The reports are used for testing visibility and reporting.
+
+Key Areas Mentioned
+
+Test Design & Execution Metrics
+
+Provides information about:
+
+- Test design
+- Test execution
+- Execution progress
+- Testing metrics
+
+Test Summary & Iteration Reports
+
+Provides:
+
+- Test summary
+- Iteration results
+- Overall testing status
+- Relevant execution outcomes
+
+«Note: The exact expansion of EOTR should be confirmed during the next KT.»
+
+---
+
+19. Integrations
+
+The Digital ecosystem contains multiple integration points.
+
+Application Integration Team
+
+The notes identify an App Integration Team that manages/maintains application integrations.
+
+Integration Responsibilities
+
+The integration team is involved in:
+
+- Application integrations
+- Backend connectivity
+- External services
+- Data exchange
+- Maintaining integration components
+
+---
+
+20. ACG Integration Team
+
+An ACG Integration Team is also mentioned.
+
+The notes indicate that the team builds/customizes integrations for ACG, including areas such as:
+
+- Payment Gateway
+- Other ACG-specific integrations
+
+High-Level Architecture
+
+Digital Application
+       ↓
+Application Integration
+       ↓
+ACG Integration Layer
+       ↓
+External / Backend Systems
+       ↓
+Response to Digital
+
+---
+
+21. Integration Testing
+
+Integration testing validates communication between the Digital application and dependent systems.
+
+Areas to Validate
+
+- Request sent correctly
+- Response received correctly
+- Data mapping
+- Error handling
+- Timeout behaviour
+- Invalid response handling
+- Backend availability
+- Vendor integration
+- Payment integration
+
+---
+
+22. Overall E2E Ecosystem
+
+The overall testing ecosystem discussed during the session can be represented as:
+
+                         ACG DIGITAL
+                              │
+                              ↓
+                             AEM
+                              │
+                              ↓
+                    AWS Digital Environment
+                              │
+                              ↓
+                       Quote → Bind
+                              │
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+       Guidewire           Database          Integrations
+          │                   │                   │
+          │                   │            ┌──────┴──────┐
+          │                   │            │             │
+          │                   │          MVR          Verisk
+          │                   │
+          └───────────────────┼─────────────────────────┘
+                              │
+                        E2E Validation
+                              │
+                    ┌─────────┴─────────┐
+                    │                   │
+                  QA Team           Business
+                    │                   │
+                    ↓                   ↓
+               QA Dashboard       Approval/Sign-off
+
+---
+
+23. E2E Testing – End-to-End Process
+
+1. Test Planning
+       ↓
+2. Environment Preparation
+       ↓
+3. Test Data Preparation
+       ↓
+4. Environment Validation
+       ↓
+5. AEM / Digital Entry
+       ↓
+6. Quote
+       ↓
+7. Backend & Integration Calls
+       ↓
+8. Database / Data Validation
+       ↓
+9. Bind
+       ↓
+10. E2E Execution
+       ↓
+11. Defect Tracking
+       ↓
+12. Retesting
+       ↓
+13. Business Review
+       ↓
+14. Approval / Sign-off
+       ↓
+15. Test Summary & Reports
+
+---
+
+24. Tools / Platforms Mentioned
+
+Tool / Platform| Purpose
+AEM| Digital application entry point
+AWS Digital Environment| Digital application environment
+Guidewire| Insurance backend
+MVR| Motor Vehicle Records/data
+Verisk| Vendor data
+pCloudy| Mobile device testing
+AWS CloudWatch| Log monitoring
+Jira / Test Management| Test tracking and management
+QA Dashboard| Testing status and metrics
+EOTR Reports| Test reporting
+Portal-based Data Tool| Test-data retrieval
+
+---
+
+25. Key Dependencies for E2E Testing
+
+Successful E2E execution depends on:
+
+Environment
+
+- Environment available
+- Correct configuration
+- Required deployments completed
+
+Data
+
+- Test data available
+- Database data available
+- Vendor data available
+- MVR data available where required
+
+Integrations
+
+- Integration services available
+- Payment gateway available
+- External vendors available
+- Backend services available
+
+Mobile
+
+- Required devices available
+- pCloudy access available
+
+Business
+
+- Test scenarios reviewed
+- Expected results confirmed
+- Business approval available
+
+---
+
+26. Common E2E Risks / Challenges
+
+Environment Issues
+
+Environment availability can affect execution.
+
+Test Data Issues
+
+Incorrect or unavailable data can prevent successful E2E execution.
+
+Vendor Dependency
+
+External vendor data/services such as Verisk and MVR may affect testing.
+
+Integration Issues
+
+Failures between Digital and backend/integrated systems can impact the complete journey.
+
+Mobile Device Availability
+
+Required mobile devices may not always be immediately available.
+
+Business Validation
+
+Business review and approval are required for final E2E results.
+
+---
+
+27. QA Execution & Reporting Flow
+
+                  QA PLANNING
+                       ↓
+                Test Execution
+                       ↓
+             ┌─────────┴─────────┐
+             ↓                   ↓
+          Pass                 Fail
+             ↓                   ↓
+       Update Result          Defect
+                                 ↓
+                             Retesting
+                                 ↓
+                              Closure
+                                 ↓
+                         Business Review
+                                 ↓
+                           Sign-off
+
+---
+
+28. Important KT Takeaways
+
+1. The session focused on the ACG Digital E2E Testing Strategy.
+2. AEM acts as an entry point into the Digital application.
+3. The Digital application connects to the AWS Digital environment.
+4. The E2E journey includes the complete Quote → Bind process.
+5. E2E testing is performed in the same relevant environment.
+6. Database validation is part of the overall E2E strategy.
+7. EBV and EBT represent early business validation/testing activities.
+8. MVR = Motor Vehicle Records and is an external data dependency.
+9. Verisk provides vendor data.
+10. Test-data provisioning previously took approximately 4–6 weeks, but the process has moved toward a portal-based approach.
+11. QAEM represents the Environment Management team.
+12. pCloudy is used for mobile-related testing.
+13. The QA team owns/coordinates testing timelines and completion.
+14. E2E results are reviewed with Business and require appropriate approval.
+15. A QA Dashboard provides testing visibility.
+16. Test execution, test stories and defect details are tracked as part of the QA process.
+17. EOTR reports provide test design/execution metrics and test summary/iteration information.
+18. Application integrations are managed by the App Integration Team.
+19. The ACG Integration Team handles/customizes integrations for ACG, including payment-related integrations.
+20. E2E testing requires coordination across Digital, QA, Business, Data, Environment, Integration and vendor teams.
+
+---
+
+29. Points to Clarify in Future KT
+
+The following terms/details from the handwritten notes should be confirmed:
+
+- Exact team responsible for internal testing.
+- Exact expansion of EBV and EBT.
+- Exact meaning/usage of QAEM.
+- Exact portal used for test-data retrieval.
+- Detailed MVR integration.
+- Detailed Verisk integration.
+- Exact responsibilities of the Data Team.
+- Exact responsibilities of the App Integration Team vs ACG Integration Team.
+- Payment Gateway architecture.
+- Exact expansion of EOTR.
+- QA Dashboard URL and metrics available.
+- Business approval/sign-off process.
+- Complete E2E test execution workflow.
+- Mobile device list and pCloudy access process.
+- Exact tool-KT scope and schedule.
