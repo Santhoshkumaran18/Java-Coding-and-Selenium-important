@@ -708,3 +708,97 @@ The following terms/details from the handwritten notes should be confirmed:
 - Complete E2E test execution workflow.
 - Mobile device list and pCloudy access process.
 - Exact tool-KT scope and schedule.
+
+
+INTEGRATION – KT NOTES
+======================
+
+1. Integration Overview
+-----------------------
+
+The Integration area is mainly divided into two teams:
+
+                    Integration
+                         |
+             +-----------+-----------+
+             |                       |
+             v                       v
+      ACG Integration Team    Application Integration Team
+             |                       |
+             v                       v
+      ACG-specific             Application-level
+      integrations             integrations
+
+
+2. ACG Integration Team
+-----------------------
+
+- Responsible for ACG-specific integrations.
+- Builds, customizes and maintains integrations based on ACG
+  business requirements.
+- Handles customized integrations required for ACG.
+- Example: Payment Gateway integration.
+- The team supports and maintains the integrations required
+  for ACG applications.
+
+
+3. Application Integration Team
+-------------------------------
+
+- Responsible for application-level integrations.
+- The team is managed/maintained by Cognizant IT Services.
+- Supports integrations between applications and external
+  services.
+- Address Sourcing was mentioned as one of the examples.
+- The team also supports other application integrations.
+
+
+4. Examples
+-----------
+
+ACG Integration Team
+    |
+    +--> Payment Gateway
+    +--> ACG-specific integrations
+    +--> Customized business integrations
+
+
+Application Integration Team
+    |
+    +--> Address Sourcing
+    +--> Other application integrations
+    +--> External/application-level integrations
+
+
+5. Key Difference
+-----------------
+
+ACG Integration Team
+→ Focuses on integrations specific to ACG.
+
+Application Integration Team
+→ Focuses on application-level integrations and related
+  integration support.
+
+
+6. KT Takeaway
+--------------
+
+The ACG Integration Team handles ACG-specific and customized
+integrations, while the Application Integration Team handles
+application-level integrations and supporting services.
+
+Example:
+
+ACG-specific requirement
+        ↓
+ACG Integration Team
+        ↓
+Payment Gateway / Other ACG Integrations
+
+
+Application requirement
+        ↓
+Application Integration Team
+        ↓
+Address Sourcing / Other Application Integrations
