@@ -1,0 +1,211 @@
+============================================================
+              FOUNDATION KT – SESSION 5
+============================================================
+
+Date: 19 August 2026
+
+Topic:
+Michigan State – Quote / Policy Flow and Business Rules
+
+
+1. INITIAL SCREEN – MICHIGAN
+----------------------------
+
+The initial screen captures basic customer and policy
+information.
+
+Initial Flow:
+
+Last Name → Policy Address → Add Vehicle → VIN / Vehicle
+Details → Michigan Rules → Quote
+
+
+Vehicle information can be added based on the information
+provided by the customer.
+
+Vehicle details may include:
+- VIN
+- Vehicle / Model information
+
+
+2. PIP – PERSONAL INJURY PROTECTION
+-----------------------------------
+
+PIP = Personal Injury Protection
+
+- PIP-related information is coming from the Guidewire
+  application.
+- The computational/business logic related to PIP is also
+  coming from the Guidewire application.
+- PIP is applicable specifically for Michigan in the flow
+  discussed during KT.
+
+
+3. MICHIGAN – BODILY INJURY LOGIC
+---------------------------------
+
+Michigan has specific logic related to Bodily Injury (BI).
+
+Business Rule:
+
+Bodily Injury Limit <= $250K → Pack 1 is Mandatory
+
+
+4. AAA DRIVE / TELEMATICS
+-------------------------
+
+AAA Drive is related to telematics.
+
+Flow:
+
+AAA Drive → Telematics → Driving-related Information
+
+
+The application may capture information related to
+telematics / driving behavior.
+
+The AAA Drive-related functionality is part of the
+quote/policy flow discussed during KT.
+
+
+5. AAA MEMBERSHIP
+-----------------
+
+If the customer is an AAA member:
+
+AAA Member → Enter AAA Membership Number → Validate → Continue
+
+
+6. EFT – ELECTRONIC FUNDS TRANSFER
+----------------------------------
+
+EFT = Electronic Funds Transfer
+
+EFT-related information/documents are part of the
+quote/policy process.
+
+EFT documents may include:
+- EFT Authorization
+- Addendum
+- Proof documents
+
+
+7. E-SIGN
+---------
+
+E-sign services should be available as part of the
+document/signing process.
+
+Flow:
+
+Documents → E-Sign → Customer Completes Required Signing
+
+
+8. PACK 1 / PACK 2
+------------------
+
+Pack 1:
+- For the applicable business scenario, Pack 1 is required.
+- If the Bodily Injury limit is <= $250K, Pack 1 is mandatory.
+
+Pack 2:
+- EFT-related documents are included.
+- EFT Authorization and Addendum are covered as part of
+  the process.
+- Signing is non-mandatory for other states, as discussed
+  during KT.
+
+Flow:
+
+BI Limit <= $250K → Pack 1 Mandatory → EFT / Documents → Pack 2 → E-Sign / Authorization
+
+
+9. DOCUMENT UPLOAD
+------------------
+
+The application provides an option to upload the required
+documents.
+
+Flow:
+
+Required Documents → Upload Documents → Document Validation / Processing → Continue Quote / Policy Process
+
+
+The KT notes mention a carrier-related page where the
+previously selected documents can be uploaded.
+
+
+10. QUOTE TO POLICY
+-------------------
+
+Once the quote process is completed:
+
+Quote → Quote Connected to Policy → Quote Ready → Email Notification
+
+
+The customer receives an email once the quote is ready.
+
+The Pack 1 form/document information is also triggered
+through email as part of the process.
+
+
+11. BUNDLE AND QUOTE PROCESS
+----------------------------
+
+The Bundle and Quote process is completed after the required
+information and selections are provided.
+
+Flow:
+
+Quote → Bundle Selection → Select Required Package → Enter / Review Details → Complete Quote → Policy
+
+
+12. BUNDLE AVAILABILITY
+-----------------------
+
+The Bundle option is applicable for all states except
+Florida, as mentioned in the KT.
+
+Flow:
+
+Bundle Selection → Check State → Bundle Applicable? → Home Bundle → Enter Details → Continue
+
+
+If the state is Florida, the Bundle option is not applicable.
+
+
+13. HOME BUNDLE
+---------------
+
+When the Home Bundle is selected:
+
+Home Bundle → Select Required Details → Enter / Confirm Information → Continue → Quote / Policy Process
+
+
+14. OVERALL HIGH-LEVEL FLOW
+---------------------------
+
+Customer Details → Policy Address → Vehicle Information → Michigan Business Rules → PIP / Bodily Injury → AAA Membership / AAA Drive → Pack 1 / Pack 2 → EFT / E-Sign → Document Upload → Quote → Policy → Email Notification → Bundle / Home Bundle → Complete Quote / Policy
+
+
+15. IMPORTANT KT POINTS
+-----------------------
+
+- PIP = Personal Injury Protection.
+- PIP logic is coming from the Guidewire application.
+- Michigan has specific business logic for Bodily Injury.
+- If Bodily Injury limit is <= $250K, Pack 1 is mandatory.
+- AAA Drive is related to telematics.
+- AAA members need to enter their AAA Membership Number.
+- EFT = Electronic Funds Transfer.
+- EFT-related documents include authorization/addendum and
+  supporting proof documents.
+- E-sign functionality is part of the document process.
+- Required documents can be uploaded through the relevant
+  document/carrier page.
+- Once the quote is ready, an email notification is triggered.
+- The quote is subsequently connected to the policy.
+- Bundle functionality is applicable to all states except
+  Florida, based on the KT discussion.
+- Home Bundle can be selected and the corresponding details
+  need to be entered.
