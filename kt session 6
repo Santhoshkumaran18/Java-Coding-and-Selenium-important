@@ -1,0 +1,257 @@
+Mobile Foundation – KT Session 6
+
+KT Conducted By: Shiny George
+Area: Mobile Testing
+Date: 20-Aug-2026
+
+---
+
+1. Mobile Application Overview
+
+- The team is responsible for mobile application testing.
+- The mobile application supports multiple business areas/domains:
+  - Membership
+  - Insurance
+  - Banking
+  - Travel
+  - Roadside Assistance
+  - CarPlay
+- Digital Roadside Request (DRR) is also supported.
+- Roadside assistance is one of the key mobile application functionalities.
+
+Application Teams / Stakeholders
+
+Area| Details
+Development Team| Capgemini Team
+Business IT Stakeholder| Sesha Pelliti – ACG
+ACG Mobile Team| Vishwaal Chakkarajam
+PM – Mobile App| Jason Owens
+Approvers| Business/IT stakeholders
+
+---
+
+2. Mobile Application Releases
+
+There are two major releases for the mobile application:
+
+1. Ionic Release – Hybrid application
+2. Native Release – Native mobile application
+
+Release Ownership
+
+- Ionic / Hybrid Release → Built and delivered by Capgemini
+- Native Release → Built and delivered by Native Team
+
+Release Frequency
+
+- The application follows approximately a 2-week sprint and sprint-planning cycle.
+- There are 2 releases per month:
+  - 1 release for Native
+  - 1 release for Hybrid/Ionic
+- The application is generally released during the second week of the month, on alternate Fridays.
+
+---
+
+3. Mobile Application Platforms
+
+The application supports:
+
+- iOS
+- Android
+
+Build Distribution / Testing Tools
+
+iOS
+
+- TestFlight
+  - Used for distributing and validating iOS builds.
+  - TestFlight contains the available iOS builds.
+
+Android
+
+- App Tester
+  - Used for distributing and validating Android builds.
+  - App Tester contains the available Android builds.
+
+---
+
+4. Device Coverage
+
+The team has approximately 10 devices available for mobile testing:
+
+- 5 Android devices
+- 5 iOS devices
+
+Manual/physical devices are provided and handled by the testing team for validation.
+
+Testing is performed across the available physical devices to ensure compatibility and functionality.
+
+---
+
+5. Mobile Testing Activities
+
+The mobile application involves both:
+
+- Manual Testing
+- Automation Testing
+
+Test Case Coverage
+
+- Approximately 330 manual test cases are available.
+- Around 75% of the applicable test cases can potentially be covered through automation.
+
+Automation coverage is mainly considered for repeatable and stable functional scenarios.
+
+---
+
+6. Testing Phases
+
+Testing activities are performed across different stages:
+
+Pre-Production
+
+- Pre-prod validation is performed before the application is released.
+- Functional validations are performed against the pre-production build.
+
+Production
+
+- Application is deployed to production after completion of the required validations.
+
+Post-Production / Post-Prod
+
+- Post-production validations are performed after deployment is completed.
+- These validations help ensure that the application is functioning correctly after the production deployment.
+
+Smoke Testing
+
+- Smoke testing is performed after the post-production deployment/validation activities.
+- The purpose is to verify the critical functionality of the application after deployment.
+
+---
+
+7. Functional Testing
+
+The team also performs cross-functional testing.
+
+Example:
+
+Membership / Insurance functionality
+↓
+Membership/Insurance team involvement
+↓
+Functional validation on the mobile application
+
+The respective functional teams participate when their features are being validated.
+
+---
+
+8. Supported Mobile Browsers
+
+Testing is performed on:
+
+- Mobile browsers
+- Mobile application
+
+The mobile testing scope therefore includes both native/hybrid applications and mobile browser scenarios, where applicable.
+
+---
+
+9. ACG Core Clubs
+
+The mobile application also has functionality related to ACG Core Clubs, including:
+
+- Colorado Clubs
+- California Clubs
+
+These club-specific functionalities are included as part of the mobile application testing scope.
+
+---
+
+10. Firmware Updates
+
+Firmware / OS Updates
+
+- Firmware-related updates are considered whenever a new mobile OS version is introduced.
+- The team validates application compatibility with the updated OS versions.
+
+Example:
+
+New iOS / Android OS released
+↓
+Firmware / OS update
+↓
+Compatibility validation
+↓
+Mobile application testing
+
+---
+
+11. Network Validation
+
+- Network-level validation is not primarily handled by the mobile testing team.
+- Network validation/testing is handled separately.
+- Network scenarios may involve different connectivity/network types such as:
+  - 2G
+  - 3G
+  - 4G
+
+The mobile team mainly focuses on application-level functionality and compatibility.
+
+---
+
+12. Automation Readiness
+
+The team is already considering automation for suitable mobile test scenarios.
+
+Automation Approach
+
+- Identify stable and repeatable manual test cases.
+- Evaluate which scenarios can be automated.
+- Approximately 75% of the current manual test coverage is considered suitable for automation.
+- Automation can be integrated as part of the overall regression/validation process.
+
+---
+
+13. High-Level Mobile Testing Flow
+
+Requirement / Feature
+        ↓
+Development
+        ↓
+Build Available
+        ↓
+iOS / Android Build Distribution
+        ↓
+Pre-Prod Validation
+        ↓
+Functional Testing
+        ↓
+Automation / Regression Testing
+        ↓
+Production Deployment
+        ↓
+Post-Prod Validation
+        ↓
+Smoke Testing
+        ↓
+Production Verification
+
+---
+
+14. Key KT Takeaways
+
+- Mobile application testing covers iOS and Android.
+- Both Hybrid/Ionic and Native applications are part of the release cycle.
+- There are approximately 2 releases per month.
+- iOS builds are distributed through TestFlight.
+- Android builds are distributed through App Tester.
+- The team has approximately 10 physical devices – 5 Android and 5 iOS.
+- Around 330 manual test cases are currently available.
+- Approximately 75% of the test cases can be considered for automation.
+- Testing includes pre-prod, production and post-prod validations.
+- Smoke testing is performed after post-production deployment validation.
+- Functional teams such as Membership and Insurance participate in relevant validations.
+- Mobile browser testing is also part of the testing scope.
+- Firmware/OS compatibility is validated when new OS versions are introduced.
+- Network-level validation is handled separately from the core mobile application testing team.
+- The mobile application supports business areas including Membership, Insurance, Banking, Travel and Roadside Assistance.
