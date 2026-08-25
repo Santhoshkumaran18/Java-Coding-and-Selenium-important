@@ -1,0 +1,246 @@
+Foundational Digital Track – KT Session 1
+
+Date: 25-Aug-2026
+KT Conducted By: Sairam and Venkatesh
+Topic: Foundational Digital Track / Digital Architecture / POC / Membership / Monitoring
+
+1. POC – Proof of Concept
+
+- A front-end manual UI has been built as part of the POC.
+- The UI is intended for internal employees to explore and interact with the APIs.
+- The POC provides a way to validate the digital flow before moving toward broader implementation.
+
+2. Membership
+
+- Membership is a key component of the ACG-related digital flow.
+- If an end customer has an AAA membership, they can avail the associated insurance benefits/services.
+- On AAA.com, customers can navigate through:
+  - My Account
+  - Membership-related functionality
+  - Insurance-related functionality
+- Membership-related activities are handled by the Membership team.
+
+Membership and Insurance Relationship
+
+- Whenever a customer purchases an insurance policy, membership details are provided/associated with the policy.
+- If a customer purchases an AAA membership, the applicable insurance-related information can also be associated with that membership.
+
+3. AAA Drive / Telematics Data
+
+- AAA Drive is related to telematics.
+- It captures driving-related data based on the customer's driving style/behaviour.
+- Based on the captured driving behaviour, a score is generated accordingly.
+- This data can be used for driving-related benefits or insurance-related calculations.
+
+4. Discounts and Rewards
+
+- AAA D?R / DOR was discussed in relation to discounts and rewards.
+- The exact terminology/acronym needs to be validated against the session transcript.
+
+5. Digital Quote and Salesforce
+
+- When a quote is created in the Digital platform, a corresponding record is created in Salesforce.
+- There is a synchronous call between the Digital platform and Salesforce.
+- Salesforce record creation is therefore part of the real-time digital transaction flow.
+
+High-Level Flow:
+
+Digital Platform
+↓
+Quote Creation
+↓
+Synchronous API Call
+↓
+Salesforce
+↓
+Record Created
+
+6. API / Source Systems
+
+- Some services/sources are handled by MuleSoft.
+- The MuleSoft team is responsible for APIs associated with those services.
+- Apigee API was also discussed as part of the API layer.
+
+7. My Account and Claims
+
+- Within the My Account section, customers can find/select their claims-related information.
+- Claims → Digital Plan was discussed.
+- The claims flow may provide digital access to claim-related information.
+
+Authentication
+
+- No additional authentication such as OTP is required in the discussed card/details entry flow.
+- This point should be validated against the transcript to confirm the exact authentication scenario.
+
+8. Reference Architecture
+
+POC Services
+
+- Membership data is coming from POC services.
+- Insurance-related information is coming from the appropriate upstream/source system.
+
+MDM
+
+MDM = Master Data Management
+
+- MDM is responsible for managing/mastering common or reference data used across systems.
+
+Authentication
+
+- Authentication mechanisms are based on OpenResty.
+- The notes indicate that the authentication mechanism is currently in the form of OpenResty-based authentication.
+
+Akamai
+
+- Akamai is primarily involved in security-related validation and the associated edge/security layer.
+
+9. Aggregators
+
+- There are four lead aggregators.
+- Aggregators were compared to a policy marketplace / Policybazaar-type model.
+- They act as an intermediary/channel through which insurance leads or policy-related transactions can be generated.
+
+High-Level Concept:
+
+Customer
+↓
+Aggregator
+↓
+Insurance / Policy Flow
+
+- Each aggregator may have its own login/access mechanism.
+- Further details on individual aggregators should be captured from the transcript.
+
+10. AWS CloudWatch Monitoring
+
+- AWS CloudWatch is used for application/API monitoring and log analysis.
+
+Steps to Check Logs
+
+1. Log in to the AWS environment.
+2. Select the appropriate AWS Region.
+3. Select CloudWatch from the AWS console.
+4. Navigate to Logs / Log Analytics.
+5. Paste the required query.
+6. Review the logs for failures or errors.
+7. Logs can be filtered based on specific APIs.
+8. Error messages can be identified from the logs accordingly.
+
+Error Monitoring
+
+- Error codes need to be checked again during recording/documentation.
+- 504 error was specifically mentioned.
+- 4xx errors were also discussed.
+- These error codes should be mapped to the respective application/service layer during detailed architecture documentation.
+
+11. Access / ServiceNow
+
+- Access-related requests need to be raised through the ServiceNow portal.
+- Appropriate access should be requested based on the required AWS/application/service permissions.
+
+12. Key Architecture Components
+
+Digital Platform:
+
+- Customer-facing digital experience and UI.
+
+POC Services:
+
+- Provides membership-related data for the POC.
+
+Membership:
+
+- Customer membership and associated benefits.
+
+Insurance:
+
+- Insurance-related customer/policy functionality.
+
+Salesforce:
+
+- CRM/backend system where digital quote records are created.
+
+MuleSoft:
+
+- API/service integration layer for certain services.
+
+Apigee:
+
+- API management layer.
+
+MDM:
+
+- Master Data Management.
+
+OpenResty:
+
+- Authentication-related layer.
+
+Akamai:
+
+- Security/edge validation.
+
+Aggregators:
+
+- Lead/policy distribution or marketplace channels.
+
+AWS CloudWatch:
+
+- Monitoring and log analysis.
+
+ServiceNow:
+
+- Access/request management.
+
+13. High-Level End-to-End Flow
+
+Customer / Internal User
+↓
+Digital UI / POC
+↓
+API Layer – Apigee / MuleSoft
+↓
+Membership / Insurance / Other Source Systems
+↓
+Salesforce
+↓
+Record / Transaction Processing
+
+Monitoring Flow:
+
+Application / API
+↓
+AWS CloudWatch
+↓
+Log Analytics
+↓
+API / Error Filtering
+↓
+Error Investigation
+
+14. Key Points to Validate from Transcript
+
+The following points should be cross-checked against the transcript before finalizing the AUD:
+
+1. Exact meaning/name of ACG.
+2. Exact acronym written as AAA D?R / DOR and its relationship to discounts/rewards.
+3. Exact role of AAA Drive / telematics in the insurance process.
+4. Exact Salesforce object/record created when a digital quote is generated.
+5. Exact responsibilities of MuleSoft vs Apigee.
+6. Exact authentication mechanism involving OpenResty.
+7. Exact role of Akamai in security validation.
+8. Names and responsibilities of the four lead aggregators.
+9. Exact meaning/context of Claims → Digital Plan.
+10. Exact interpretation of the 504 and 4xx error scenarios.
+11. Exact ServiceNow request/access process.
+12. Any additional components, APIs, integrations, or data flows mentioned in the transcript.
+
+15. Overall KT Summary
+
+The session provided an overview of the Foundational Digital architecture, including the POC, membership and insurance relationship, digital quote creation, Salesforce integration, API layers, authentication, security, aggregators, and AWS CloudWatch monitoring.
+
+The POC currently provides a front-end manual UI for internal users to interact with and validate APIs. Membership is an important part of the overall customer and insurance journey. Digital quote creation involves synchronous communication with Salesforce, while MuleSoft and Apigee are involved in the API/integration layer.
+
+The architecture also includes MDM, OpenResty authentication, Akamai security validation, external aggregators, and AWS CloudWatch for monitoring and troubleshooting. ServiceNow is used for requesting the required access.
+
+The transcript should be used as the primary source to confirm terminology, system responsibilities, API flows, error handling, and any architecture details that were unclear in the handwritten notes.
