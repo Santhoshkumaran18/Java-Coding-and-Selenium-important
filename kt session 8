@@ -1,0 +1,194 @@
+Foundational KT for Digital – Session 8
+
+Date: 27-Aug-2026
+KT Conducted By: Sairam and Venkatesh
+
+1. Ionic and Cloud Devices
+
+- Ionic is running on cloud devices.
+- Libraries are provided by the Native team. [Validate exact team name from transcript.]
+
+2. Clubs and Applications
+
+- There are 3 clubs in the current application setup.
+- Push notifications are available for the clubs.
+- If the Play Store app gets disabled, it becomes a separate application.
+- ACG Core Club has DRR functionality.
+- There are different login processes depending on the club.
+
+Club-wise ZIP Codes
+
+- ACG Core Club → ZIP Code: 48126
+- Colorado Club → ZIP Code: 80111
+- Carolina Club → ZIP Code: 20697
+
+Note: ZIP codes and club names should be validated against the transcript.
+
+3. Application and Environment
+
+- The application/demo is completed for the discussed flow.
+- Membership accounts can be created in the lower environment.
+- For the production environment, account details are provided by the relevant team.
+- Testing is primarily performed using physical devices.
+- Physical-device testing can cover:
+  - Biometric authentication
+  - Face ID
+  - Device-specific behaviour
+
+4. Membership Card / V Card
+
+- Membership Card / V Card functionality is available.
+- Membership card details will be visible to the user.
+- Users have options to:
+  - View gas stations
+  - View business-related information
+
+5. Roadside Assistance
+
+- Roadside Assistance is associated with AAA membership.
+- Users can submit a roadside assistance request through the application.
+
+6. AAA Dollars / Wallet
+
+- AAA Dollars functionality was discussed.
+- AAA Dollars represents a level/type of wallet functionality.
+- It can be compared conceptually to a wallet such as Amazon Pay.
+- The wallet can contain/manage the applicable AAA dollar balance/details.
+
+7. Location and Policy Tool
+
+- Based on the policy tool, the default location is set based on the user's location.
+- The discussed flow assumes the user's location is within the US.
+- Location-based behaviour needs to be considered during testing.
+
+8. Testing Platforms
+
+Testing is performed mainly on the following platforms/devices:
+
+- Android
+- iOS
+- macOS / Safari
+
+9. Network Testing
+
+- Network throttling testing is currently not being performed.
+- The following network conditions are not specifically being tested:
+  - 2G
+  - 3G
+  - 4G
+
+This should be considered as a testing limitation/point for validation.
+
+10. User ID / Password
+
+- Change User ID / Password functionality is available only in the ACG Core Club.
+- This functionality is not necessarily available across all clubs.
+
+11. Club-specific Features
+
+The following features were specifically noted:
+
+- AAA Dollars
+- CarPlay
+- Chatbot
+
+These features are not available in the other two clubs:
+
+- Carolina
+- Colorado
+
+Therefore, feature availability can vary depending on the selected club.
+
+12. Quote
+
+- Quote functionality is part of the digital application flow.
+- The quote flow should be validated across the applicable clubs and environments.
+
+13. Travel
+
+- Travel functionality is expected to be the same across all clubs.
+- No club-specific difference was noted for the Travel functionality.
+
+14. Test Case Count
+
+The following approximate test case counts were mentioned during the KT:
+
+- Mobile → 338 test cases
+- Cars → 601 test cases
+- Clubs → 330 test cases
+
+Note: The exact numbers and categorisation should be confirmed from the transcript.
+
+15. Digital API and Mobile
+
+- Digital API and Mobile were discussed as separate areas/components.
+- The relationship between the Digital API layer and Mobile application should be captured in the final architecture documentation.
+
+16. Release / Application Structure
+
+- A discussion was held around whether the release is handled separately or as one combined application.
+- The notes indicate a possibility of having a separate application/release.
+- Exact release and application structure needs to be confirmed from the transcript.
+
+17. Key Functional Areas Discussed
+
+The KT session covered the following areas:
+
+- Ionic framework
+- Cloud-device execution
+- Native libraries
+- Multiple clubs
+- Club-specific login
+- Push notifications
+- Play Store application
+- Membership
+- Membership Card / V Card
+- DRR
+- ZIP-code-based club identification
+- AAA Dollars
+- Wallet functionality
+- Gas station information
+- Business information
+- Roadside Assistance
+- Quote
+- Travel
+- CarPlay
+- Chatbot
+- User ID / Password
+- Biometric authentication
+- Face ID
+- Physical-device testing
+- Android testing
+- iOS testing
+- macOS / Safari testing
+- Network testing
+- Digital API
+- Mobile application
+- Test-case coverage
+- Application release structure
+
+18. Important Points to Validate Against Transcript
+
+The following points should be confirmed using the KT transcript before using these notes as final AUD input:
+
+1. Exact name of the team providing the Ionic libraries.
+2. Exact names of the three clubs.
+3. Confirmation of the three ZIP codes:
+   - 48126
+   - 80111
+   - 20697
+4. Exact meaning of DRR.
+5. Exact behaviour when the Play Store application is disabled.
+6. Whether the three clubs have completely separate applications or share the same application.
+7. Exact lower-environment vs production account-creation process.
+8. Exact meaning and scope of AAA Dollars.
+9. Exact policy/location tool used for default location.
+10. Whether macOS/Safari is part of the official supported testing matrix.
+11. Confirmation that 2G/3G/4G network throttling is not currently tested.
+12. Exact club-specific availability of AAA Dollars, CarPlay and Chatbot.
+13. Confirmation of the test-case counts:
+    - Mobile – 338
+    - Cars – 601
+    - Clubs – 330
+14. Exact relationship between Digital API and Mobile.
+15. Exact application/release strategy and whether releases are separate or combined.
